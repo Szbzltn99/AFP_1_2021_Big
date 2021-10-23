@@ -8,6 +8,8 @@
 
 ## 5. Rendszerre vonatkozó törvények, szabványok, ajánlások
 
+Opensource szoftver. Bárki által letölthető és felhasználható. Az értékesítése nem megengedett!
+
 ## 6. Jelenlegi üzleti folyamatok modellje
 
 ## 7. Igényelt üzleti folyamatok modellje
