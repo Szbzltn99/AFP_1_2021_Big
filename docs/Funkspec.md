@@ -6,6 +6,8 @@
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 
+![Jelenlegi üzleti folyamatok modellje](../Doc/Pictures/FuncSpec4.png)
+
 ## 5. Igényelt üzleti folyamatok modellje
 
 ## 6. Használati esetek
