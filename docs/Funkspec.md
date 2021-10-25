@@ -65,6 +65,45 @@ A minőségi információt biztosítja a CAPTCHA amely védi az adatok minőség
 
 ## 7. Képernyőterv
 
+Kezdőlap bejelentkezés nélkül
+![Kezdőlap bejelentkezés nélkül](../docs/Pictures/indexnotlogged.PNG)
+
+Kezdőlap bejelentkezés után (user)
+![Kezdőlap bejelentkezés nélkül (user)](../docs/Pictures/userindex.PNG)
+
+Kezdőlap bejelentkezés után (admin)
+![Kezdőlap bejelentkezés nélkül (admin)](../docs/Pictures/adminindex.PNG)
+
+Bejelentkező felület
+![Bejelentkező felület](../docs/Pictures/loginpage.PNG)
+
+Regisztrációs felület
+![Regisztrációs felület](../docs/Pictures/registerpage.PNG)
+
+Témakörök
+![Témakörök](../docs/Pictures/surveylist.PNG)
+
+Témakör megválaszolása
+![Témakör megválaszolása](../docs/Pictures/surveysend.PNG)
+
+Megválaszolt témakörök
+![Megválaszolt témakörök](../docs/Pictures/completedsurveylist.PNG)
+
+Megválaszolt témakör módosítása
+![Megválaszolt témakör módosítása](../docs/Pictures/surveymodify.PNG)
+
+Átlag válaszok
+![Átlag válaszok](../docs/Pictures/surveyaverageanswers.PNG)
+
+Admin felület
+![Admin felület](../docs/Pictures/adminview.PNG)
+
+Felhasználó módosítása adminként
+![Felhasználó módosítása adminként](../docs/Pictures/modifyuserdataadmin.PNG)
+
+Felhasználó módosítása felhasználóként
+![Felhasználó módosítása felhasználóként](../docs/Pictures/modifyuserdata.PNG)
+
 ## 8. Forgatókönyv
 
 A program nem kíván különösebb telepítési és használati útmutatót. Elég, ha egy grafikus felülettel rendelkező webböngésző fel van telepítve ( alapértelmezett: windows - internet explorer / edge, linux: mozilla, mac - safari ). A felhasználó beüti az oldal címét: xyz.com a böngésző címsorába és rögtön át lesz irányítva az oldalra. Az oldal tartalmát a webszerver szolgáltatja a mögötte lévő adatbázis segítségével. Az oldalra átírányítva a felhasználó megkezdheti a kérdések megválaszolását ha regisztrált az oldalra, majd bejelentkezett. Ha a felhasználónak bármi nemű problémája akad az oldal működésével kapcsolatban, akkor a megadott elérhetőségek alapján tudja ezt jelezni az oldal karbantartói felé. Az oldal adminisztrátorai moderálják az oldalt a megfelelő eszközök segítségével. Az oldal karbantartásáért felelős csapat pedig az oldal rendeltetésének megfelelő működését ellenőrzi és javítja a felmerülő problémákat.
