@@ -1,5 +1,7 @@
 ## 1. Áttekintés
 
+A rendszer egy online teszt kitöltő oldalt valósít meg. A rendszert teljes mértékben online módon kell megvalósítani, weblap keretében. A weboldalon a regisztrált és regisztráció nélküli felhasználók kérdésekre tudnak válaszolni. Ezt a felhasználói válaszokat a rendszer eltárolja és ez képes lesz kimutatni, hogy az emberek többsége mit gondol egya adott témáról. Ez egy átlagot fog mutatni minden egyes kérdésnél. Az oldal ingyenes lesz és csak adatbegyűjtésre lesz alkalmas lényegében. A kérdések például időjárással, kriptovalutákkal vagy bankjegyek értékével kapcsolatosak lesznek.
+
 ## 2. Jelenlegi helyzet
 
 ## 3. Vágyálom rendszer 
