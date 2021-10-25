@@ -28,6 +28,20 @@ Az oldal igyenes lesz és csak adatbegyűjtésre lesz alkalmas lényegében. A k
     
 ## 6. Használati esetek
 
+- **Belépve**
+  - **Hozzáfér az összes kérdőívhez**
+    - **Tartalma:**
+    - **Kérdések**
+    - **Saját válaszok**
+    - **Mások átlag válasza**
+  - **Új kérdőív kitöltése**
+  - **Kitöltött kérdőív válaszának szerkesztése**
+  - **Kitöltött kérdőív válaszának törlése**
+- **Nem belépve**
+  - **Hozzáfér a publikus kérdőívekhez**
+    - **Új kérdőív kitöltése**
+    - **Mások átlag válasza**
+
 ## 7. Képernyőterv
 
 ## 8. Forgatókönyv
