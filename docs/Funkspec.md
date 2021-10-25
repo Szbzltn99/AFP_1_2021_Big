@@ -14,6 +14,21 @@ A minőségi információt biztosítja a CAPTCHA amely védi az adatok minőség
 
 ## 3. Követelménylista
 
+1. Bejelentkezési felület:
+ * A felhasználók ezen a felületen tudnak bejelentkezni a weboldalra, ám a weboldal számos része elérhető regisztráció nélkül is, de a regisztráció ajánlott.
+2. Regisztrációs felület:
+ * A felhasználók ezen a felületen tudnak regisztrálni a weboldalra, így feloldva a többi extra lehetőséget.
+3. Kitöltött kérdőíveim menüpont:
+ * A regisztrált felhasználók itt érik el a bővebb funkciókat.
+ * Meg tudják tekinteni az általuk kitöltött kérdőíveket és a hozzájuk tartozó válaszokat.
+ * A kitöltött kérdőíveikhez tartozó válaszaikat tudják módosítani és törölni is.
+ * Felhasználók átlag válaszait meg tudja tekinteni az egyes témakörökben.
+ * Ki tudnak jelentkezni
+4. Jogosultságok:
+ * Admin: Teljes hozzáférése van a weboldalhoz, szerkesztheti, kilistázhatja és törölheti a felhasználók adatait is, továbbá kérdőíveket vehet fel a rendszerbe, módosíthatja azokat, vagy akár törölheti is őket.
+ * Vendég: Név nélkül ki tudja tölteni a publikus kérdőíveket, de a leadott válaszokat nem tudja módosítani.
+ * Felhasználó: Meg tudja jeleníteni a kitöltendő kérdőíveket. A rendszer az általa kitöltött kérdőívek válaszát eltárolja, és ki tudja listázni a saját válaszokat, ezeket tudja szerkeszteni és törölni.
+
 ## 4. Jelenlegi üzleti folyamatok modellje
 
 ![Jelenlegi üzleti folyamatok modellje](../docs/Pictures/FuncSpec4.png)
