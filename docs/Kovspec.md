@@ -14,6 +14,17 @@ Opensource szoftver. Bárki által letölthető és felhasználható. Az érték
 
 ## 7. Igényelt üzleti folyamatok modellje
 
+7.1 Bejelentkezés
+    7.1.1 Kérdések kitöltése
+    7.1.2 Eredmények megtekintése
+    7.1.3 Hozzárendelt kérdések megtekintése
+    Admin joggal rendelkezőknek:
+    7.1.4 Új kérdések hozzáadása
+    7.1.3 Kérdések felhasználókhoz rendelése
+    7.1.4 Felhasználók moderálása
+    7.1.5 Kijelentkezés
+7.2 Regisztráció
+
 ## 8. Követelménylista
 
 Modul | ID | Név | Kifejtés
