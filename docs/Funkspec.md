@@ -13,7 +13,19 @@ Az oldal igyenes lesz és csak adatbegyűjtésre lesz alkalmas lényegében. A k
 ![Jelenlegi üzleti folyamatok modellje](../docs/Pictures/FuncSpec4.png)
 
 ## 5. Igényelt üzleti folyamatok modellje
-
+    5.1 Bejelentkezés
+        5.1.1 Témakörök megjelenítése
+                5.1.1.1 Új témakör megválszolása
+                5.1.1.2 Általam kitöltött kérdőívek válaszainak megjelenítése
+                5.1.1.3 Általam kitöltött kérdőívek válaszainak módosítása
+                5.1.1.4 Általam kitöltött kérdőívek válaszainak törlése
+        5.1.2 Kijelentkezés
+    5.2 Bejelentkezés nélküli felhasználók jogai:
+        5.2.1 Témakörök megjelenítése
+                5.2.1.1 Új témakör megválszolása
+        5.2 Regisztráció
+        5.3 Felhasználók átlag válaszainak megjelenítése
+    
 ## 6. Használati esetek
 
 ## 7. Képernyőterv
