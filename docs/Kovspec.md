@@ -4,6 +4,12 @@ A rendszer egy online teszt kitöltő oldalt valósít meg. A rendszert teljes m
 
 ## 2. Jelenlegi helyzet
 
+A mai világban nagyon sokat számítanak az adatok,információk és azok minősége, gondoljunk itt akár az álhírekre és ezek súlyára.
+Minden az online térben mozog, félrevezető információk, átverések. Gondoljuk csak el hány olyan hirdetéssel találkoztunk, ahol közel semmi pénz befektetésével a befizetett pénzünk akár 10-20 szorosát ígérik, akár valami startup kriptovaluta projekten, vagy valami mágikus algoritmus segítségével.
+Hatalmas kényelmet és biztonságot jelentene az embereknek, ha lenne egy olyan egységes rendszer, ahol az információ valós, így jön szóba ez a rendszer.
+A felhasználók kérdéseket kapnak egy adott témában, azt a rendszer kiértékeli, elemzi és a többségi arány alapján lehet majd megtekinteni az eredményeket. A rendszer mind mobilon, mind weben elérhető lesz, így nem kell azoknak sem aggódniuk, akiknek nincs számítógépük vagy esetleg okostelefonjuk, a rendszer univerzális megoldást hoz mindkét esetre, hogy a felhasználók minőségi információkhoz jussanak.
+A minőségi információt biztosítja a CAPTCHA amely védi az adatok minőségét oly módon, hogy egy kis teszt keretében ki kell választani a korrekt megoldást, ezzel ellehetlenítve a botok iránti adatrontás esélyét. Ilyen kis teszt például, hogy válasszuk ki amelyik képkockákon vonat található, esetleg fordítsunk el egy figurát a korrekt irányba.
+
 ## 3. Vágyálom rendszer 
 
 ## 4. Funkcionális követelmények
