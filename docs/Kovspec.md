@@ -19,6 +19,21 @@ A weblap maga egy letisztult oldal a lehető legjobban átlátható, könnyen ke
 
 ## 4. Funkcionális követelmények
 
+1. Bejelentkezési felület:
+ * A felhasználók ezen a felületen tudnak bejelentkezni a weboldalra a bővebb elérhetőség érdekében.
+2. Regisztrációs felület:
+ * A felhasználók ezen a felületen tudnak beregisztrálni a weboldalra.
+3. Kitöltött kérdőíveim menüpont:
+ * A felhasználók itt érik el a bővebb funkciókat
+ * Meg tudják tekinteni az általuk kitöltött kérdőíveket.
+ * Az előző pontba foglaltakat tudják szerkeszteni és törölni
+ * Ki tudnak jelentkezni
+4. Jogosultságok:
+ * Admin: Teljes hozzáférése van a weboldalhoz, szerkesztheti, kilistázhatja és törölheti a felhasználók adatait is.
+ * Vendég: Név nélkül ki tudja tölteni a publikus kérdőíveket.
+ * Felhasználó: Meg tudja jeleníteni a kitöltendő kérdőíveket. A rendszer az általa kitöltött kérdőívek válaszát eltárolja, és ki tudja listázni a saját válaszokat, ezeket tudja szerkeszteni és törölni.
+
+
 ## 5. Rendszerre vonatkozó törvények, szabványok, ajánlások
 
 Opensource szoftver. Bárki által letölthető és felhasználható. Az értékesítése nem megengedett!
