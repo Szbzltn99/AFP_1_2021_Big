@@ -12,6 +12,11 @@ A minőségi információt biztosítja a CAPTCHA amely védi az adatok minőség
 
 ## 3. Vágyálom rendszer 
 
+A project célja olyan felület biztosítása ahol a gépi tanulást megpróbáljuk valamilyen szinten megvalósítani. Ezt egy internetes weboldalként tervezzük megcsinálni ahol az emberek kitölthetnek kérdőíveket.
+Ezt meg tudják majd tenni bejelentkezve felhasználói fiókkal vagy fiók nélkül is. Annyi haszna lesz annak, hogy valakinek van fiókja, hogy ki tudja törölni és tudja módosítani saját válaszait, és persze meg tudja tekinteni őket. Felhasználói fiók nélkül ezt nem lenne egyszerű megvalósítani így annak, aki csak "vendég"-ként tölti ki a kérdőíveket a későbbiekben nem tudja szerkeszteni saját válaszait, sem törölni őket.
+A weblap maga egy letisztult oldal a lehető legjobban átlátható, könnyen kezelhető, mindenki számára egyértelmű működéssel bírjon.
+
+
 ## 4. Funkcionális követelmények
 
 ## 5. Rendszerre vonatkozó törvények, szabványok, ajánlások
