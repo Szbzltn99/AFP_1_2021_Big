@@ -66,42 +66,55 @@ A minőségi információt biztosítja a CAPTCHA amely védi az adatok minőség
 ## 7. Képernyőterv
 
 Kezdőlap bejelentkezés nélkül
+
 ![Kezdőlap bejelentkezés nélkül](../docs/Pictures/indexnotlogged.PNG)
 
 Kezdőlap bejelentkezés után (user)
+
 ![Kezdőlap bejelentkezés nélkül (user)](../docs/Pictures/userindex.PNG)
 
 Kezdőlap bejelentkezés után (admin)
+
 ![Kezdőlap bejelentkezés nélkül (admin)](../docs/Pictures/adminindex.PNG)
 
 Bejelentkező felület
+
 ![Bejelentkező felület](../docs/Pictures/loginpage.PNG)
 
 Regisztrációs felület
+
 ![Regisztrációs felület](../docs/Pictures/registerpage.PNG)
 
 Témakörök
+
 ![Témakörök](../docs/Pictures/surveylist.PNG)
 
 Témakör megválaszolása
+
 ![Témakör megválaszolása](../docs/Pictures/surveysend.PNG)
 
 Megválaszolt témakörök
+
 ![Megválaszolt témakörök](../docs/Pictures/completedsurveylist.PNG)
 
 Megválaszolt témakör módosítása
+
 ![Megválaszolt témakör módosítása](../docs/Pictures/surveymodify.PNG)
 
 Átlag válaszok
+
 ![Átlag válaszok](../docs/Pictures/surveyaverageanswers.PNG)
 
 Admin felület
+
 ![Admin felület](../docs/Pictures/adminview.PNG)
 
 Felhasználó módosítása adminként
+
 ![Felhasználó módosítása adminként](../docs/Pictures/modifyuserdataadmin.PNG)
 
 Felhasználó módosítása felhasználóként
+
 ![Felhasználó módosítása felhasználóként](../docs/Pictures/modifyuserdata.PNG)
 
 ## 8. Forgatókönyv
