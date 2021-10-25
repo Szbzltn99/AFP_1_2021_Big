@@ -15,16 +15,17 @@ Opensource szoftver. Bárki által letölthető és felhasználható. Az érték
 ## 7. Igényelt üzleti folyamatok modellje
 
     7.1 Bejelentkezés
-            7.1.1 Kérdések kitöltése
-            7.1.2 Eredmények megtekintése
-            7.1.3 Hozzárendelt kérdések megtekintése
-        Admin joggal rendelkezőknek:
-            7.1.4 Új kérdések hozzáadása
-            7.1.5 Kérdések felhasználókhoz rendelése
-            7.1.6 Felhasználók moderálása
-            7.1.7 Kijelentkezés
-    7.2 Regisztráció
-
+            7.1.1 Témakörök megjelenítése
+                    7.1.1.1 Új témakör megválszolása
+                    7.1.1.2 Általam kitöltött kérdőívek válaszainak megjelenítése
+                    7.1.1.3 Általam kitöltött kérdőívek válaszainak módosítása
+                    7.1.1.4 Általam kitöltött kérdőívek válaszainak törlése
+            7.1.2 Kijelentkezés
+    7.2 Bejelentkezés nélküli felhasználók jogai:
+            7.2.1 Témakörök megjelenítése
+                    7.2.1.1 Új témakör megválszolása
+            7.2 Regisztráció
+            7.3 Felhasználók átlag válaszainak megjelenítése
 ## 8. Követelménylista
 
 Modul | ID | Név | Kifejtés
