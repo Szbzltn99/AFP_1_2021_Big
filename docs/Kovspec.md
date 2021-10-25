@@ -40,6 +40,19 @@ Opensource szoftver. Bárki által letölthető és felhasználható. Az érték
 
 ## 6. Jelenlegi üzleti folyamatok modellje
 
+        6.1 A kérdőívekhez kapcslódó adatok nyilvántartása
+                6.1.1 Új témakör megválaszolása
+                        6.1.1.1 Regisztrált/Vendég felhasználó végzi
+                        6.1.1.2 A rendszer kiértékeli a válaszokat
+                6.1.2 Adott felhasználó által kitöltött kérdőívek válaszai megjelenítése
+                        6.1.2.1 Regisztrált felhasználó végzi
+                        6.1.2.2 Megjelennek a kitöltött kérdőívek és a hozzájuk tartozó válaszok
+                6.1.3 Adott felhasználó által kitöltött kérdőívek válaszai módosítása
+                        6.1.3.1 Regisztrált felhasználó végzi
+                        6.1.3.2 A kérdőívhez tartozó válaszok módosulnak
+                6.1.4 Adott felhasználó által kitöltött kérdőívek válaszai törlése
+                        6.1.4.1 Regisztrált felhasználó végzi
+                        6.1.4.2 Az adott kérdőívhez tartozó válaszok törlése
 ## 7. Igényelt üzleti folyamatok modellje
 
     7.1 Bejelentkezés
