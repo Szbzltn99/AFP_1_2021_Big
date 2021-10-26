@@ -27,6 +27,17 @@
 
 ## 10. Tesztterv
 
+Az alább leírt tesztelések célja a rendszer és funkcióinak teljes körű vizsgálata, ellenőrzése.
+
+Gombok, linkek tesztelése: tesztünk célja: a weboldalon megjelenő gombok és linkek megfelelő működésének ellenőrzése.
+Adatrögzítések leelenőrzése, hogy sikeresen feltöltődtek-e az adatbázisba. 
+Adatok betöltése az adatbázisból.
+Műveletek tesztelése: Törlés, módosítás, hozzáadás, megjelenítés.
+A jelszavakkal biztonságos tárolásának ellenőrzése.
+Hibás, hiányos adatok esetén adott hibaüzenetek ellenőrzése.
+A weboldal helyes működésének letesztelése különböző böngészőkben például Microsoft Edge, Google Chrome, Firefox…
+A weboldal hibátlan megfelelő megjelenés tesztelése számítógépen illetve mobiltelefonon.
+
 ## 11. Telepítési terv
 
 ## 12. Karbantartási terv
