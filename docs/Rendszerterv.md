@@ -2,6 +2,28 @@
 
 ## 2. Projektterv
 
+### Projekttszerepkörök:
+  * Termék tulajdonos: WIP csapat
+### Projekttmunkások és felelősségek:
+  * Backend munkálatok: Csapat tagjai
+  * Frontend munkálatok: Csapat tagjai
+
+### Feladatuk: 
+- adatbázis létrehozása az adatok tárolásához
+- megfelelő funkciók elkészítése az oldal megfelelő működésének érdekében
+- felhasználókezelés alkalmazása.
+- felhasználói felület kialakítása
+
+### Ütemterv:
+ - 10.26 Követelmény specifikáció 
+ - 10.26 Funkcionális specifikáció
+ - 11.09 Rendszerterv
+ - 11.14 Adatbázis kialakítása
+ - 11.16 Felhasználókezelés megvalósítása
+ - 11.16 Backend funkciók elkészítése
+ - 11.16 Frontend design megtervezése
+ - 11.16 Felhasználói felület kialakítása
+
 ## 3. Üzleti folyamatok modellje
 
 ## 4. Követelmények
