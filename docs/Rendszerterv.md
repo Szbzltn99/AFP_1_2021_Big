@@ -49,6 +49,8 @@ A rendszer tökéletes működéséhez szükség van egy adatbázis szerverre, e
 
 ## 9. Implementációs terv
 
+A webes felület HTML, CSS és PHP nyelven fog elkészülni. A különböző technológiákat amennyire csak lehet, külön fájlokba írva készítjük el, úgy csatoljuk egymáshoz ezzel is egy átláthatóbb, könnyebben változtatható és bővíthető weboldal lesz. Az adatokat egy MYSQL adatbázisban fogjuk tárolni.
+
 ## 10. Tesztterv
 
 Az alább leírt tesztelések célja a rendszer és funkcióinak teljes körű vizsgálata, ellenőrzése.
