@@ -104,7 +104,7 @@ ALTER TABLE survey_question ADD CONSTRAINT survey_question_qid_questions_qid FOR
 ```
 **UML**
 
-![database](../Doc/Pictures/Db_UML.png)
+![database](../docs/Pictures/Db_UML.png)
 
 ## 9. Implementációs terv
 
