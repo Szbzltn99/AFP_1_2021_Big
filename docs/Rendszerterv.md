@@ -43,6 +43,8 @@
 
 ## 7. Architekturális terv
 
+A rendszer tökéletes működéséhez szükség van egy adatbázis szerverre, ebben az esetben MySql-t használunk. A bootstrap mint CSS keretrendszer felel a reszponzív webdesign-ért. A backend php alapú.
+
 ## 8. Adatbázis terv
 
 ## 9. Implementációs terv
