@@ -47,6 +47,65 @@ A rendszer tökéletes működéséhez szükség van egy adatbázis szerverre, e
 
 ## 8. Adatbázis terv
 
+### **Táblák**
+- **users:** Minden felhasználó, aki az oldalon regisztrált
+  - **uid:** Azonosító szám, mindenképp felvesz egy egész típusú értéket, amit a rendszer automatikusan generál és egyesével növekszik, nem lehet két azonos szám
+  - **username:** A felhasználók regisztrációkor megadott neve, nem lehet üres
+  - **password:** Nem lehet üres a mező, legalább 8 karakter
+  - **email:** Egyedi, tehát nem lehet két felhasználónak ugyanazon email címe és egyben nem lehet üres mező
+  - **permission:** Egész érték, nem lehet üres mező 
+
+
+
+**DSL**
+```
+CREATE TABLE users (
+uid INT NOT NULL PRIMARY KEY,
+username VARCHAR(45) NOT NULL,
+password VARCHAR(45) NOT NULL,
+email INT NOT NULL,
+permission INT NOT NULL);
+
+CREATE TABLE survey (
+sid INT NOT NULL PRIMARY KEY,
+sname INT NOT NULL,
+topic INT NOT NULL);
+
+CREATE TABLE user_survey (
+usid INT NOT NULL PRIMARY KEY,
+sid INT NOT NULL,
+uid INT NOT NULL,
+answer INT NOT NULL,
+questionid INT NOT NULL);
+
+CREATE TABLE topic (
+tid INT NOT NULL PRIMARY KEY,
+name INT NOT NULL);
+
+CREATE TABLE questions (
+qid INT NOT NULL PRIMARY KEY,
+question VARCHAR(45) NOT NULL,
+answer1 INT NOT NULL,
+answer2 INT NOT NULL,
+answer3 INT NOT NULL);
+
+CREATE TABLE survey_question (
+id INT NOT NULL PRIMARY KEY,
+sid INT NOT NULL,
+qid INT NOT NULL);
+
+ALTER TABLE survey ADD CONSTRAINT survey_topic_topic_tid FOREIGN KEY (topic) REFERENCES topic(tid);
+ALTER TABLE user_survey ADD CONSTRAINT user_survey_sid_survey_sid FOREIGN KEY (sid) REFERENCES survey(sid);
+ALTER TABLE user_survey ADD CONSTRAINT user_survey_uid_users_uid FOREIGN KEY (uid) REFERENCES users(uid);
+ALTER TABLE user_survey ADD CONSTRAINT user_survey_questionid_questions_qid FOREIGN KEY (questionid) REFERENCES questions(qid);
+ALTER TABLE survey_question ADD CONSTRAINT survey_question_sid_survey_sid FOREIGN KEY (sid) REFERENCES survey(sid);
+ALTER TABLE survey_question ADD CONSTRAINT survey_question_qid_questions_qid FOREIGN KEY (qid) REFERENCES questions(qid);
+
+```
+**UML**
+
+![database](../Doc/Pictures/Db_UML.png)
+
 ## 9. Implementációs terv
 
 A webes felület HTML, CSS és PHP nyelven fog elkészülni. A különböző technológiákat amennyire csak lehet, külön fájlokba írva készítjük el, úgy csatoljuk egymáshoz ezzel is egy átláthatóbb, könnyebben változtatható és bővíthető weboldal lesz. Az adatokat egy MYSQL adatbázisban fogjuk tárolni.
