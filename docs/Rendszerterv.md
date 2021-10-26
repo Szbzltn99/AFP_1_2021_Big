@@ -55,6 +55,33 @@ A rendszer tökéletes működéséhez szükség van egy adatbázis szerverre, e
   - **email:** Egyedi, tehát nem lehet két felhasználónak ugyanazon email címe és egyben nem lehet üres mező
   - **permission:** Egész érték, nem lehet üres mező 
 
+- **user_survey:** Kapcsolótábla ami össze kapcsolja az user és survey táblákat
+  - **usid:** Általános azonosító a rekordhoz, elsődleges kulcs
+  - **sid:** Másodlagos kulcs a survey-hez
+  - **uid:** Másodlagos kulcs az user táblához
+  - **answer:** Szövegesen a válasz értéke, azért szükséges mert ha "egyéb" opció által mi magunk adunk egy egyedi választ a kérdésre akkor itt tárolódik el
+  - **questionid:** Másodlagos kulcs az question táblához amiben benne van, hogy hanyadik választ választották
+
+- **survey:** Kérdőív tábla
+  - **sid:** Általános azonosító a rekordhoz, elsődleges kulcs
+  - **sname:** Kérdőív neve
+  - **topic:** Kérdőív témájának másodlagos kulcsa
+  
+- **topic:** Kérdőív témája tábla
+  - **tid:** Általános azonosító a rekordhoz, elsődleges kulcs
+  - **name:** Téma elnevezése
+  
+- **survey_question:** Kérdőív és kérdései kapcsoló tábla
+  - **id:** Általános azonosító a rekordhoz, elsődleges kulcs
+  - **sid:** Másodlagos kulcs a survey-hez
+  - **qid:**Másodlagos kulcs a question tábla elsődleges kulcsához
+  
+- **questions:** Kérdések tábla
+  - **qid:** Általános azonosító a rekordhoz, elsődleges kulcs
+  - **question:** A kérdő mondat ami megjelenik a képernyőn
+  - **answer1:** Első válasz lehetőség
+  - **answer2:** Második válasz lehetőség
+  - **answer3:** Harmadik válasz lehetőség
 
 
 **DSL**
