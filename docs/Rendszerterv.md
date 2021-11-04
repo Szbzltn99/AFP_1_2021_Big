@@ -162,3 +162,5 @@ Mac - Safari
 A webszerverre közvetlenül az internetről kapcsolódnak rá a kliensek. A weboldal URL címét szükséges ismerni és ezt beírni a böngésző címsorába.
 
 ## 12. Karbantartási terv
+
+A felhasználók egy report formájában tudják jelenteni a felmerűlő funkcionális hibákat az adminok felé, amit a fejlesztők fognak kijavítani. A javított hibák egy oldalon Changelog vagy hír formában meg fognak jelenni visszajelzésként a felhasználók felé, az új funkciók / frissítésekkel együtt. A karbantartási időkről a felhasználókat egy e-mail formájában előre tájékoztatjuk.
