@@ -26,7 +26,7 @@
 
 ## 3. Üzleti folyamatok modellje
 
-![business](../docs/Picture/rend_3.png)
+![business](../docs/Pictures/rend_3.png)
 
 ## 4. Követelmények
 
