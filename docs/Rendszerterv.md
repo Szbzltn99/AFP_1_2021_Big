@@ -26,6 +26,8 @@
 
 ## 3. Üzleti folyamatok modellje
 
+![business](../docs/Picture/rend_3.png)
+
 ## 4. Követelmények
 
 ## 5. Funkcionális terv
