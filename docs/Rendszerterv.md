@@ -47,8 +47,47 @@ Az oldal igyenes lesz és csak adatbegyűjtésre lesz alkalmas lényegében. A k
 
   **Törvényi előírások, szabványok:**
   - **GDPR-nek való megfelelés**
+
+
 ## 5. Funkcionális terv
 
+**Rendszerszereplők:**
+  - **Adminisztrátor**
+  - **Felhasználó**
+  - **Vendég**
+
+  **Rendszerhasználati esetek és lefutásaik:**
+  - **Adminisztrátor**
+    - **Képes felhasználókat törölni**
+    - **Tudja módosítani a felhasználók jelszavát és adatait is**
+    - **Látja az összes regisztrált felhasználót**
+    - **Fel tud venni kérdőíveket**
+    - **Módosítani tudja a kérődíveket, azok adatait**
+    - **Teljes hozzáférése van a rendszerhez**
+  - **Felhasználó**
+    - **Megtekintheti a kérdőíveket**
+    - **Megtekintheti a kérdőívhez leadott válaszokat**
+    - **Törölheti a korábban megadott válaszokat az egyes kérdőívekből**
+    - **Módosíthatja a saját adatait**
+    - **Módosíthatja jelszavát**
+  - **Vendég**
+    - **Megtekintheti a kérdőíveket**
+    - **Megtekintheti a kérdőívhez leadott válaszokat**
+    - **Képes regisztrálni és bejelentkezni**
+
+  - **Menü-hierarchiák:**
+    - **Bejelentkezés**
+    - **Regisztráció**
+    - **Kérdőívek**
+
+    - **Bejelentkezés után:**
+      - **Felhasználók listája:** kizárólag admin joggal rendelkező felhasználóknak
+        - **Felhasználó adatainak módosítása**
+        - **Felhasználók törlése**
+
+      - **Kérdőív létrehozása:** kizárólag admin joggal rendelkező felhasználóknak
+      - **Profil**
+      - **Kijelentkezés**
 ## 6. Fizikai környezet
 
 - **Az alkalmazás csak web platformra készül, AWS EC2 instance-ra telepített Apache szerveren, MySQL adatbázissal lesz futtatva.**
