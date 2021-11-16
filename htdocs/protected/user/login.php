@@ -57,7 +57,7 @@ if(isset($_POST["loginBtn"]))
     {
         $uname = $_POST["log_username"];
         
-        $checkQuery = "SELECT * FROM felhasznalok WHERE felhasznalonev = '".$uname."'";
+        $checkQuery = "SELECT * FROM users WHERE username = '".$uname."'";
         $actualUser = classList($checkQuery);
         if($actualUser === NULL || empty($actualUser))
         {
@@ -66,7 +66,7 @@ if(isset($_POST["loginBtn"]))
         else
         {
             $passwd = sha1($_POST["log_password"]);
-            $loginQuery = "SELECT id,felhasznalonev,jelszo,email,jog FROM felhasznalok WHERE felhasznalonev = '".$uname."' AND jelszo = '".$passwd."'";
+            $loginQuery = "SELECT id,username,password,email,permission FROM users WHERE username = '".$uname."' AND password = '".$passwd."'";
             $successLogin = classList($loginQuery);
             if(empty($successLogin))
             {
@@ -79,10 +79,10 @@ if(isset($_POST["loginBtn"]))
                 foreach($successLogin as $row)
                 {
                     $_SESSION["uid"] = $row["id"];
-                    $_SESSION["felhasznalonev"] = $row["felhasznalonev"];
-                    $_SESSION["jelszo"] = $row["jelszo"];
+                    $_SESSION["felhasznalonev"] = $row["username"];
+                    $_SESSION["jelszo"] = $row["password"];
                     $_SESSION["email"] = $row["email"];
-                    $_SESSION["jog"] = $row["jog"];
+                    $_SESSION["permission"] = $row["permission"];
                 }
                 echo "<script>alert('".$_SESSION['uid']." Bejelentkezett felhasználónév: ".$_SESSION['felhasznalonev']." Jelszava: ".$_SESSION['jelszo']." Email: ".$_SESSION['email']." Joga: ".$_SESSION['jog']."')</script>";
                 header("location: index.php?P=home");
