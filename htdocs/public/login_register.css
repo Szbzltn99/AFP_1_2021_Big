@@ -1,0 +1,38 @@
+.simple-container
+{
+    width:300px;
+    max-width:100%;
+    margin:50px auto;
+}
+.simple-container input
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+.simple-container h2, .simple-container .link
+{
+    text-align: center
+}
+.simple-container .link
+{
+    width: 50%;
+}
+.simple-container input[type="submit"]
+{
+    width: 50%;
+}
+a
+{
+    color:#fff;
+}
+.simple-container a
+{
+  text-decoration: none;
+  color: #c5aa6a;
+  transition: .3s ease all;
+  
+}
+.simple-container span:hover
+{
+  color: #e6c67b;
+}
