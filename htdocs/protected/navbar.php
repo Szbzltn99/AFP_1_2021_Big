@@ -50,11 +50,12 @@
         </div>
       </li>
       <?php endif; ?>
+      <?php if($_SESSION != NULL): ?>
       <li class="nav-item">
         <a <?php if($_GET['P'] == "editUser"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?>  href="index.php?P=editUser">Adataim <span>[<?php echo $_SESSION["felhasznalonev"]; ?>]</span></a>
       </li>
       
-      <?php if($_SESSION != NULL): ?>
+      
       <li class="nav-item">
         <a class="nav-link" href="index.php?P=logout">Kijelentkezés</a>
       </li>
