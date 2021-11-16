@@ -25,26 +25,29 @@
     <li class="nav-item">
         <a <?php if($_GET['P'] == "home"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=home">Kezdőlap</a>
       </li>
-    <?php if($_SESSION == NULL): ?>
+    
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Témakörök
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        
+          <a <?php if($_GET['P'] == "answerSurvey"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=answerSurvey">Új témakör megválaszolása</a>
+          <?php if($_SESSION != NULL): ?>
+          <a <?php if($_GET['P'] == "topics"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Témakörök megtekintése</a>
+          <a <?php if($_GET['P'] == "completedSurveys"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Kitöltött kérdőívek megjelenítése</a>
+          <a <?php if($_GET['P'] == "averages"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Átlagok</a>
+          <?php endif; ?>
+        </div>
+      </li>
+      <?php if($_SESSION == NULL): ?>
       <li class="nav-item">
         <a <?php if($_GET['P'] == "login"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=login">Bejelentkezés</a>
       </li>
       <li class="nav-item">
         <a <?php if($_GET['P'] == "register"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=register">Regisztráció</a>
       </li>
-      <?php else: ?>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Témakörök
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a <?php if($_GET['P'] == "topics"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Témakörök megtekintése</a>
-          <a <?php if($_GET['P'] == "answerSurvey"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=answerSurvey">Új témakör megválaszolása</a>
-          <a <?php if($_GET['P'] == "completedSurveys"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Kitöltött kérdőívek megjelenítése</a>
-          <a <?php if($_GET['P'] == "averages"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Átlagok</a>
-        </div>
-      </li>
-      
+      <?php endif; ?>
       <?php
         if($_SESSION["permission"] == 1): ?>
         <li class="nav-item dropdown">
@@ -54,10 +57,11 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           
           <a <?php if($_GET['P'] == "newSurveyUpload"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=newSurveyUpload">Új kérdőív feltöltése</a>
+          <a <?php if($_GET['P'] == "addNewQuestion"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Új kérdés hozzáadása</a>
           <a <?php if($_GET['P'] == "listUser"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Felhasználók szerkesztése</a>
         </div>
       </li>
-      <?php endif; ?>
+     
       <li class="nav-item">
         <a <?php if($_GET['P'] == "editUser"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?>  href="index.php?P=editUser">Adataim</a>
       </li>
