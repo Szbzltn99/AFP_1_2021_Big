@@ -25,14 +25,14 @@
     <li class="nav-item">
         <a <?php if($_GET['P'] == "home"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=home">Kezdőlap</a>
       </li>
-    <?php //if($_SESSION == NULL): ?>
+    <?php if($_SESSION == NULL): ?>
       <li class="nav-item">
         <a <?php if($_GET['P'] == "login"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=login">Bejelentkezés</a>
       </li>
       <li class="nav-item">
         <a <?php if($_GET['P'] == "register"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=register">Regisztráció</a>
       </li>
-      <?php //else: ?>
+      <?php else: ?>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Témakörök
@@ -64,7 +64,7 @@
       <li class="nav-item">
         <a class="nav-link" href="index.php?P=logout">Kijelentkezés</a>
       </li>
-      <?php //endif; ?>
+      <?php endif; ?>
     </ul>
   </div>
 </nav>
