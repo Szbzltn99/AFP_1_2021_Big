@@ -1,0 +1,36 @@
+/*--------------------------------------------------------*/
+/*------------------NAVIGÁCIÓS MENÜ CSS-------------------*/
+/*--------------------------------------------------------*/
+.navbar
+{
+    background-color: #672d8d !important;
+}
+.nav-item a
+{
+    
+    color: #ebe9e9 !important;
+    font-weight: 600;
+    transition: 0.2s all ease;
+}
+.nav-item .active
+{
+    color: #976a97 !important;
+}
+.nav-item a:hover
+{
+    color: #976a97 !important;
+}
+.dropdown-menu
+{
+    background-color: #672d8d !important;
+    border-radius: 10px;
+}
+.dropdown-menu a
+{
+    color: #ebe9e9 !important;
+}
+.dropdown-menu a:hover
+{
+    background-color: #503266 !important;
+}
+/*---------------------------END--------------------------*/
