@@ -1,6 +1,5 @@
 <?php session_start(); 
 ob_start();
-$_SESSION["permission"] = 1;
 ?>
 <?php require_once 'protected/config.php';
 require_once DATABASE_CONTROLLER;
