@@ -30,7 +30,8 @@ function executeQuery($query)
         echo "siker";
     }
     else{
-        echo "fail";
+
+        echo "fail: ".$query;
     }
     mysqli_stmt_close($statement);
     mysqli_close($connection);
@@ -51,6 +52,7 @@ function classList($query)
         }
     }
     else{
+        echo $query;
         die('Sikertelen végrehajtás');
     }
     
