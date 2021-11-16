@@ -52,8 +52,8 @@
 {
     color: #05c4ba;
     transition: 0.3s ease-in-out all;
-    font-size: 10px;
-    vertical-align: middle;
+    font-size: 12px;
+    vertical-align: text-bottom;
 }
 .nav-item a:hover span
 {
