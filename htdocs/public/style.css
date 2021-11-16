@@ -38,3 +38,11 @@
     background-color: #503266 !important;
 }
 /*---------------------------END--------------------------*/
+.gif, .gif img
+{
+    text-align: center;
+    border: 1px solid black;
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+}
