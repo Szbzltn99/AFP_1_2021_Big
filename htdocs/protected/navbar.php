@@ -1,17 +1,5 @@
     <HTML>
     <head>
-        <style>
-          .navbar-brand
-          {
-            color: #FFF !important;
-          }
-          .navbar-brand span *
-          {
-            text-decoration: none !important;
-            color: #e9e9e9 !important;
-            transition: 0.2s ease all !important;
-          }
-        </style>
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -63,7 +51,7 @@
       </li>
      
       <li class="nav-item">
-        <a <?php if($_GET['P'] == "editUser"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?>  href="index.php?P=editUser">Adataim</a>
+        <a <?php if($_GET['P'] == "editUser"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?>  href="index.php?P=editUser">Adataim <span>[<?php echo $_SESSION["felhasznalonev"]; ?>]</span></a>
       </li>
       <?php endif; ?>
       <?php if($_SESSION != NULL): ?>

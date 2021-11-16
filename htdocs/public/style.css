@@ -1,6 +1,18 @@
 /*--------------------------------------------------------*/
 /*------------------NAVIGÁCIÓS MENÜ CSS-------------------*/
 /*--------------------------------------------------------*/
+.navbar-brand
+{
+    color: rgb(174, 80, 177) !important;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: 0.3s ease all !important;
+}
+.navbar-brand:hover
+{
+    color: rgb(229, 151, 231) !important;
+    transform: scale(1.15);
+}
 .navbar
 {
     background-color: #672d8d !important;
@@ -11,14 +23,13 @@
 }
 .nav-item a
 {
-    
     color: #ebe9e9 !important;
     font-weight: 600;
     transition: 0.2s all ease;
 }
 .nav-item .active
 {
-    color: #976a97 !important;
+    color: rgb(174, 80, 177) !important;
 }
 .nav-item a:hover
 {
@@ -36,6 +47,17 @@
 .dropdown-menu a:hover
 {
     background-color: #503266 !important;
+}
+.nav-item a span
+{
+    color: #05c4ba;
+    transition: 0.3s ease-in-out all;
+    font-size: 10px;
+    vertical-align: middle;
+}
+.nav-item a:hover span
+{
+    color: #c405bb;
 }
 /*---------------------------END--------------------------*/
 .gif
