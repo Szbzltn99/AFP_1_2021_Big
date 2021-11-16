@@ -57,7 +57,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           
           <a <?php if($_GET['P'] == "newSurveyUpload"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=newSurveyUpload">Új kérdőív feltöltése</a>
-          <a <?php if($_GET['P'] == "addNewQuestion"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Új kérdés hozzáadása</a>
+          <a <?php if($_GET['P'] == "addNewQuestion"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=addNewQuestion">Új kérdés hozzáadása</a>
           <a <?php if($_GET['P'] == "listUser"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Felhasználók szerkesztése</a>
         </div>
       </li>
@@ -65,6 +65,8 @@
       <li class="nav-item">
         <a <?php if($_GET['P'] == "editUser"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?>  href="index.php?P=editUser">Adataim</a>
       </li>
+      <?php endif; ?>
+      <?php if($_SESSION != NULL): ?>
       <li class="nav-item">
         <a class="nav-link" href="index.php?P=logout">Kijelentkezés</a>
       </li>

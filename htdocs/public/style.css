@@ -5,6 +5,10 @@
 {
     background-color: #672d8d !important;
 }
+.nav-item
+{
+    margin-right: 20px;
+}
 .nav-item a
 {
     
