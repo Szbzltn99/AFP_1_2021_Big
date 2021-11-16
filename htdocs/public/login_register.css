@@ -20,6 +20,15 @@
 .simple-container input[type="submit"]
 {
     width: 50%;
+    background-color: #976a97;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.2s ease all;
+}
+.simple-container input[type="submit"]:hover
+{
+    background-color: rgb(99, 70, 99);
 }
 a
 {
@@ -28,11 +37,12 @@ a
 .simple-container a
 {
   text-decoration: none;
-  color: #c5aa6a;
+  font-weight: 600;
+  color: #976a97;
   transition: .3s ease all;
   
 }
 .simple-container span:hover
 {
-  color: #e6c67b;
+  color: rgb(99, 70, 99);
 }
