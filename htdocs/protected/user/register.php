@@ -69,7 +69,7 @@ if(isset($_POST["registerBtn"]))
     else
     {
         $uname = $_POST["reg_username"];
-        $checkQuery = "SELECT * FROM felhasznalok WHERE felhasznalonev = '".$uname."'";
+        $checkQuery = "SELECT * FROM users WHERE username = '".$uname."'";
         $ifNotExists = classList($checkQuery);
         if($ifNotExists === NULL || empty($ifNotExists))
         {
@@ -77,7 +77,7 @@ if(isset($_POST["registerBtn"]))
         
         $passwd = sha1($_POST["reg_password"]);
         $email = $_POST["reg_email"];
-        $registerQuery = "INSERT INTO felhasznalok(felhasznalonev,jelszo,email,jog) VALUES('". $uname. "', '". $passwd ."', '". $email ."', 0)";
+        $registerQuery = "INSERT INTO users(username,password,email,permission) VALUES('". $uname. "', '". $passwd ."', '". $email ."', 0)";
         executeQuery($registerQuery);
         }
         else
