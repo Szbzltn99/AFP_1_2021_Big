@@ -45,7 +45,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 form-group link">
-                <span>Már van felhasználód? <a href = "index.php?P=login"><span>Kattints ide!</span><a><span>
+                Már van felhasználód? <a href = "index.php?P=login"><span>Kattints ide!</span><a>
             </div>
         </div>
         <div class="row">

@@ -59,7 +59,7 @@
       </li>
       <?php endif; ?>
       <li class="nav-item">
-        <a <?php if($_GET['P'] == "editUser"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?>  href="index.php?P=edit_user">Adataim</a>
+        <a <?php if($_GET['P'] == "editUser"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?>  href="index.php?P=editUser">Adataim</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?P=logout">Kijelentkezés</a>
