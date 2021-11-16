@@ -33,8 +33,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 form-group">
-                Már van felhasználód? <a href = "index.php?P=register"><span>Kattints ide!</span><a>
+            <div class="col-md-12 form-group link">
+                Még nincs felhasználód? <a href = "index.php?P=register"><span>Kattints ide!</span><a>
             </div>
         </div>
         <div class="row">
