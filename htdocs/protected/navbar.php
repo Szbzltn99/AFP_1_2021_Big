@@ -39,7 +39,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a <?php if($_GET['P'] == "topics"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Témakörök megtekintése</a>
-          <a <?php if($_GET['P'] == "answerSurvey"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Új témakör megválaszolása</a>
+          <a <?php if($_GET['P'] == "answerSurvey"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=answerSurvey">Új témakör megválaszolása</a>
           <a <?php if($_GET['P'] == "completedSurveys"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Kitöltött kérdőívek megjelenítése</a>
           <a <?php if($_GET['P'] == "averages"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Átlagok</a>
         </div>
@@ -53,7 +53,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           
-          <a <?php if($_GET['P'] == "newSurveyUpload"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Új kérdőív feltöltése</a>
+          <a <?php if($_GET['P'] == "newSurveyUpload"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=newSurveyUpload">Új kérdőív feltöltése</a>
           <a <?php if($_GET['P'] == "listUser"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Felhasználók szerkesztése</a>
         </div>
       </li>
