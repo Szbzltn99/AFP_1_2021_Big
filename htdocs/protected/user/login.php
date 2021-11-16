@@ -66,7 +66,7 @@ if(isset($_POST["loginBtn"]))
         else
         {
             $passwd = sha1($_POST["log_password"]);
-            $loginQuery = "SELECT id,username,password,email,permission FROM users WHERE username = '".$uname."' AND password = '".$passwd."'";
+            $loginQuery = "SELECT uid,username,password,email,permission FROM users WHERE username = '".$uname."' AND password = '".$passwd."'";
             $successLogin = classList($loginQuery);
             if(empty($successLogin))
             {
@@ -78,7 +78,7 @@ if(isset($_POST["loginBtn"]))
                 
                 foreach($successLogin as $row)
                 {
-                    $_SESSION["uid"] = $row["id"];
+                    $_SESSION["uid"] = $row["uid"];
                     $_SESSION["felhasznalonev"] = $row["username"];
                     $_SESSION["jelszo"] = $row["password"];
                     $_SESSION["email"] = $row["email"];
