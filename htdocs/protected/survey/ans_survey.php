@@ -1,4 +1,4 @@
 <?php
-require_once DATABASE_CONTROLLER; //ezt majd kiszedem
+echo "<h1>Answer survey</h1>";
 
 ?>
