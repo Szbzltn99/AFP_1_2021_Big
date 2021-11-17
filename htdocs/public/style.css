@@ -73,3 +73,38 @@
     border-radius: 10px;
     width: 100%;
 }
+
+/*--------------------------------------------------------*/
+/*---------------------EDIT USER CSS----------------------*/
+/*--------------------------------------------------------*/
+.usersDiv
+{
+    width: 70%;
+    background-color: #50326648;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 10px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.295);
+}
+.usersDiv h2
+{
+    text-align: center;
+}
+.usersDiv table
+{
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    border: 2px solid #41023d;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+    font-size: 16px !important;
+}
+.usersDiv table th
+{
+    border-bottom: 2px solid #96058c;
+}
+/*---------------------------END--------------------------*/

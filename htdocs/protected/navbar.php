@@ -46,7 +46,7 @@
           
           <a <?php if($_GET['P'] == "newSurveyUpload"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=newSurveyUpload">Új kérdőív feltöltése</a>
           <a <?php if($_GET['P'] == "addNewQuestion"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=addNewQuestion">Új kérdés hozzáadása</a>
-          <a <?php if($_GET['P'] == "listUser"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="#">Felhasználók szerkesztése</a>
+          <a <?php if($_GET['P'] == "listUser"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=listUser">Felhasználók szerkesztése</a>
         </div>
       </li>
       <?php endif; ?>
