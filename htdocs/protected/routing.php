@@ -13,6 +13,7 @@ $_GET['P'] = 'home';
 		case 'newSurveyUpload': isUserLoggedIn() && $_SESSION['permission'] == 1 ? require_once PROTECTED_DIR.'admin/add_survey.php' : header('Location: index.php'); break;
 		case 'addNewQuestion': isUserLoggedIn() && $_SESSION['permission'] == 1 ? require_once PROTECTED_DIR.'admin/add_question.php' : header('Location: index.php'); break;
 		case 'listUser': isUserLoggedIn() && $_SESSION['permission'] == 1 ? require_once PROTECTED_DIR.'admin/listUser.php' : header('Location: index.php'); break;
+		case 'completedSurveys'  : isUserLoggedIn() ? require_once PROTECTED_DIR.'survey/completed_surveys.php' : header('Location: index.php'); break;
 
 		default: require_once PROTECTED_DIR.'404.php'; break;
 	}
