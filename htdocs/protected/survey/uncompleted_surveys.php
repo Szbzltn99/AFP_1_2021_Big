@@ -35,13 +35,13 @@
     if (isset($_POST["fill"]))
    {
 
-       header("Refresh:0");      
+       header("Refresh:0");      //ide jön majd a link a kitöltőhöz
    }
 
    if (isset($_POST["re"]))
    {
        
-       header("Refresh:0");   //most még csak kitörli az eddigi válaszok, nem irányít át a kitöltő oldalra, ha meg akarjuk őrizni az eddigi kitöltéseket akkor másképp kell majd megoldani
+       header("Refresh:0");   //ide jön a link a folytatáshoz a kitöltőnél
    }
 ?>
 <?php if($result === NULL || empty($result)): ?>
