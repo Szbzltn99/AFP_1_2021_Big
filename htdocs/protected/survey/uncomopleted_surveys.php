@@ -1,6 +1,7 @@
 <?php
 
-    $query = "SELECT s.sname, t.name, s.sid FROM survey s, topic t, 
+    $query = "SELECT surv.sname, top.name, surv.sid FROM survey surv, topic top, 
+    (SELECT s.sname, t.name, s.sid FROM survey s, topic t, 
     (SELECT t.sid, t.uid FROM 
     (
     SELECT us.sid,us.uid,COUNT(us.questionid) q_db FROM 
@@ -15,9 +16,19 @@
     ) mok 
     WHERE mok.uid=" . $_SESSION["uid"] . "
     AND s.sid=mok.sid 
-    AND s.topic=t.tid;";
+    AND s.topic=t.tid) giga 
+    WHERE surv.sid!=giga.sid 
+    AND surv.topic=top.tid;";
 
     $result = classList($query);
+
+    $query="SELECT s.sname, s.sid FROM survey s
+    WHERE s.sid NOT IN 
+    (SELECT u.sid FROM user_survey u
+    WHERE u.sid = " . $_SESSION["uid"] . "
+    )";
+
+    $newsurveys = classList($query);
 
     $n=0;
 
@@ -48,26 +59,32 @@
     </head>
     <body>
         <div class = "usersDiv">
-            <h2>Kitöltött kérdőívek</h2>
+            <h2>Kérdőívek kitöltése</h2>
             <table class="table">
             <form method="post">
             <thead>
                 <tr>
-                <th>#</th>
+                <th>Azonosító</th>
                 <th>Kérdőív</th>
                 <th>Téma</th>
-                <th>Kérdőív módosításai</th>
+                <th>Kitöltés állapota</th>
+                <th>Művelet</th>
                 </tr>
             </thead>
             <tbody>
             <?php foreach($result as $row): $n=$n+1?>
                 <tr>
-                <td><?=$n?></td>
+                <td><?=$row['sid']?></td>
                 <td><?=$row['sname']?></td>
                 <td><?=$row['name']?></td>
+                <?php if(in_array($row['sid'],$newsurveys)):?>
+                <td>Nincs elkezdve</td>
+                <?php else: ?>
+                <td>El van kezdve</td>
+                <?php endif; ?>
                 <td>
-                    <button name="del" value =<?= $row['sid']?>>Összes válasz törlése</button>
-                    <button name="re" value =<?= $row['sid']?>>Újra kitöltés</button>
+                    <button name="del" value =<?= $row['sid']?>>Kitöltés</button>
+                    <button name="re" value =<?= $row['sid']?>>Folyatás</button>
                 </td>
                 </tr>
             <?php endforeach;?>
