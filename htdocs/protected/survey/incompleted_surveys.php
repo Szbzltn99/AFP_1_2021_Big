@@ -22,7 +22,7 @@
 
     $result = classList($query);
 
-    $query="SELECT s.sname, s.sid FROM survey s
+    $query="SELECT s.sid FROM survey s
     WHERE s.sid NOT IN 
     (SELECT u.sid FROM user_survey u
     WHERE u.sid = " . $_SESSION["uid"] . "
@@ -32,20 +32,14 @@
 
     $n=0;
 
-    if (isset($_POST["del"]))
+    if (isset($_POST["fill"]))
    {
-       $query = "DELETE FROM user_survey WHERE sid = " . $_POST["del"] . " AND uid = " . $_SESSION["uid"];
-       
-       executeQuery($query);
 
        header("Refresh:0");      
    }
 
    if (isset($_POST["re"]))
    {
-       $query = "DELETE FROM user_survey WHERE sid = " . $_POST["re"] . " AND uid = " . $_SESSION["uid"];
-       
-       executeQuery($query);
        
        header("Refresh:0");   //most még csak kitörli az eddigi válaszok, nem irányít át a kitöltő oldalra, ha meg akarjuk őrizni az eddigi kitöltéseket akkor másképp kell majd megoldani
    }
@@ -83,7 +77,7 @@
                 <td>El van kezdve</td>
                 <?php endif; ?>
                 <td>
-                    <button name="del" value =<?= $row['sid']?>>Kitöltés</button>
+                    <button name="fill" value =<?= $row['sid']?>>Kitöltés</button>
                     <button name="re" value =<?= $row['sid']?>>Folyatás</button>
                 </td>
                 </tr>
