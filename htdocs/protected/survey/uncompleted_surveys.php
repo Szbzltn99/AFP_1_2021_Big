@@ -66,12 +66,12 @@
                 </tr>
             </thead>
             <tbody>
-            <?php foreach($result as $row): $n=$n+1?>
+            <?php foreach($result as $row): ?>
                 <tr>
                 <td><?=$row['sid']?></td>
                 <td><?=$row['sname']?></td>
                 <td><?=$row['name']?></td>
-                <?php if(in_array($row['sid'],$newsurveys)):?>
+                <?php if(in_array($row['sid'],$newsurveys[0])):?>
                 <td>Nincs elkezdve</td>
                 <?php else: ?>
                 <td>El van kezdve</td>
