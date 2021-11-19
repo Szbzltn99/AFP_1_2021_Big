@@ -8,7 +8,7 @@ $_GET['P'] = 'home';
         case 'register': !isUserLoggedIn() ? require_once PROTECTED_DIR.'user/register.php' : header('Location: index.php'); break;
 		case 'home':  require_once PROTECTED_DIR.'home.php'; break;
 		case 'logout': userLogout(); break;
-		case 'answerSurvey' : require_once PROTECTED_DIR.'survey/incompleted_surveys.php'; break;
+		case 'answerSurvey' : require_once PROTECTED_DIR.'survey/uncompleted_surveys.php'; break;
 		case 'editUser' : isUserLoggedIn() ? require_once PROTECTED_DIR.'user/editUser.php' : header('Location: index.php'); break;
 		case 'newSurveyUpload': isUserLoggedIn() && $_SESSION['permission'] == 1 ? require_once PROTECTED_DIR.'admin/add_survey.php' : header('Location: index.php'); break;
 		case 'addNewQuestion': isUserLoggedIn() && $_SESSION['permission'] == 1 ? require_once PROTECTED_DIR.'admin/add_question.php' : header('Location: index.php'); break;
