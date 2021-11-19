@@ -1,8 +1,18 @@
 <?php
 
     $query = "SELECT s.sname, t.name, s.sid FROM survey s, topic t, 
-    (SELECT t.sid, t.uid FROM (SELECT us.sid,us.uid,COUNT(us.questionid) q_db FROM user_survey us GROUP BY us.sid,us.uid) t 
-    WHERE q_db = (SELECT COUNT(sq.qid) FROM survey_question sq WHERE sq.sid = t.sid)) mok 
+    (SELECT t.sid, t.uid FROM 
+    (
+    SELECT us.sid,us.uid,COUNT(us.questionid) q_db FROM 
+    user_survey us 
+    GROUP BY us.sid,us.uid
+    ) t 
+    WHERE q_db = 
+    (
+    SELECT COUNT(sq.qid) FROM 
+    survey_question sq 
+    WHERE sq.sid = t.sid)
+    ) mok 
     WHERE mok.uid=" . $_SESSION["uid"] . "
     AND s.sid=mok.sid 
     AND s.topic=t.tid;"; //nagyon vad lekérdezés
