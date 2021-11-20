@@ -5,21 +5,29 @@
     <body>
         <div class = "modifyUserDiv" class="container">
             <?php 
-            $getUserDataQuery = "SELECT * FROM users WHERE uid = ".$_GET['I']." LIMIT 1";
+            $getUserDataQuery = "SELECT * FROM users WHERE uid = ".$_SESSION["uid"]." LIMIT 1";
             $userResult = classList($getUserDataQuery);
                 foreach($userResult as $userData)
                 {
                 ?>
                 <table>
                 <form method = "POST">
-                    <h2>Edit <span style = "color:#42a68f;"><?php echo $userData["username"]; ?></span> user datas</h2>
+                    <h2>Edit your <span style = "color:#42a68f;">personal</span> datas</h2>
                     <tr>
                         <td><span>Username: </span></td>
                         <td><input type = "text" value = "<?php echo $userData["username"];?>" disabled></td>   
                     </tr>
                     <tr>
+                        <td><span>Old password:</span></td>
+                        <td><input type = "password" name = "oldPassword"></td>
+                    </tr>
+                    <tr>
                         <td><span>New password:</span></td>
                         <td><input type = "password" name = "newPassword"></td>
+                    </tr>
+                    <tr>
+                        <td><span>New password again:</span></td>
+                        <td><input type = "password" name = "newPasswordAgain"></td>
                     </tr>
                     <tr>
                         <td colspan = 2><button class="btn btn-dark" name = "modifyUserPass" value =<?= $userData['uid']?>>Modify Password</button></td>
@@ -64,7 +72,33 @@
                 <script>
                     Swal.fire({
                     icon: 'warning',
-                    title: 'User password need 8 length password!',
+                    title: 'Password need minimum 8 length password!',
+                    showConfirmButton: false,
+                    timer: 2000
+                    })
+                </script>
+            <?php
+        }
+        else if(sha1($_POST["oldPassword"]) != $_SESSION["jelszo"])
+        {
+            ?>
+                <script>
+                    Swal.fire({
+                    icon: 'warning',
+                    title: 'The old password not correct!',
+                    showConfirmButton: false,
+                    timer: 2000
+                    })
+                </script>
+            <?php
+        }
+        else if($_POST["newPassword"] != $_POST["newPasswordAgain"])
+        {
+            ?>
+                <script>
+                    Swal.fire({
+                    icon: 'warning',
+                    title: "Password doesn't match!",
                     showConfirmButton: false,
                     timer: 2000
                     })
@@ -73,20 +107,20 @@
         }
         else
         {
-            $getUID = $_GET["I"];
             $getNewPassword = sha1($_POST["newPassword"]);
-            $modifyEmailQuery = "UPDATE users SET password = '".$getNewPassword."' WHERE uid = ".$getUID."";
+            $modifyEmailQuery = "UPDATE users SET password = '".$getNewPassword."' WHERE uid = ".$_SESSION['uid']."";
             executeQuery($modifyEmailQuery);
+            $_SESSION["jelszo"] = $getNewPassword;
             ?>
                 <script>
                     Swal.fire({
                     icon: 'success',
-                    title: 'User password successfully modified!',
+                    title: 'Password successfully modified!',
                     showConfirmButton: false,
                     timer: 1500
                     })
                     window.setTimeout(function() {
-                    window.location.href = 'index.php?P=modifyUserAdmin&I=<?php echo $getUID; ?>';
+                    window.location.href = 'index.php?P=editUser';
                     }, 1500);
                 </script>
             <?php
@@ -108,20 +142,19 @@
         }
         else
         {
-            $getUID = $_GET["I"];
             $getNewEmail = $_POST["newEmail"];
-            $modifyEmailQuery = "UPDATE users SET email = '".$getNewEmail."' WHERE uid = ".$getUID."";
+            $modifyEmailQuery = "UPDATE users SET email = '".$getNewEmail."' WHERE uid = ".$_SESSION['uid']."";
             executeQuery($modifyEmailQuery);
             ?>
                 <script>
                     Swal.fire({
                     icon: 'success',
-                    title: 'User email successfully modified!',
+                    title: 'Email successfully modified!',
                     showConfirmButton: false,
                     timer: 1500
                     })
                     window.setTimeout(function() {
-                    window.location.href = 'index.php?P=modifyUserAdmin&I=<?php echo $getUID; ?>';
+                    window.location.href = 'index.php?P=editUser';
                     }, 1500);
                 </script>
             <?php
