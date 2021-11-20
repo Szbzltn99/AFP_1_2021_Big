@@ -1,6 +1,19 @@
 <html>
     <head>
     <link rel="stylesheet" href="<?php echo PUBLIC_DIR."style.css";?>"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function showPassword(id)
+        {
+            var x = document.getElementById(id);
+            if (x.type === "password") 
+            {
+                x.type = "text";
+            } else 
+            {
+                x.type = "password";
+            }
+        }
+    </script>    
     </head>
     <body>
         <div class = "modifyUserDiv" class="container">
@@ -19,7 +32,15 @@
                     </tr>
                     <tr>
                         <td><span>New password:</span></td>
-                        <td><input type = "password" name = "newPassword"></td>
+                        <td><input type = "password" name = "newPassword" id = "newPass"></td>
+                    </tr>
+                    <tr>
+                        <td colspan = 2 class = 'checkPasswords'>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick = "showPassword('newPass')"/>
+                            <label class="custom-control-label" for="customSwitch1">Show passwords</label>
+                        </div>
+                        </td>
                     </tr>
                     <tr>
                         <td colspan = 2><button class="btn btn-dark" name = "modifyUserPass" value =<?= $userData['uid']?>>Modify Password</button></td>
