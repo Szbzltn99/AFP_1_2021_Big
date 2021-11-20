@@ -54,7 +54,7 @@
                                         <button class="btn btn-dark" name = "deleteUser" value =<?= $row['uid']?>>Delete</button>
                                     <?php endif; ?>
                                 <?php endif; ?>
-                                <?php  if($row['permission'] != 2 && $row["permission"] == 0): ?>
+                                <?php  if($row["permission"] == 0 || $_SESSION["permission"] > 1 && $row["permission"] != 2): ?>
                                     <button class="btn btn-dark" name = "modifyUserData" value =<?= $row['uid']?>>Modify</button>
                                 <?php elseif($row["permission"] == 2): ?>
                                     <span style = "font-size: 16px;">You can't modify the owner!<span>
@@ -87,11 +87,12 @@ if(isset($_POST["revokeAdmin"]))
 {
     $getUID = $_POST["revokeAdmin"];
     $revokeAdminQuery = "UPDATE users SET permission = 0 WHERE uid = ".$getUID."";
+            
     if($getUID == $_SESSION["uid"]):
-    $_SESSION["permission"] = 0;
-    header("location: index.php");
+        $_SESSION["permission"] = 0;
+        header("location: index.php");
     else:
-    header("location: index.php?P=listUser");
+        header("location: index.php?P=listUser");
     endif;
     executeQuery($revokeAdminQuery);
 }
@@ -99,8 +100,8 @@ if(isset($_POST["promoteAdmin"]))
 {
     $getUID = $_POST["promoteAdmin"];
     $promoteAdminQuery = "UPDATE users SET permission = 1 WHERE uid = ".$getUID."";
-    header("location: index.php?P=listUser");
     executeQuery($promoteAdminQuery);
+    header("location: index.php?P=listUser");
 }
 if(isset($_POST["deleteUser"]))
 {
@@ -111,7 +112,8 @@ if(isset($_POST["deleteUser"]))
 }
 if(isset($_POST["modifyUserData"]))
 {
-    //TODO
+    $getUID = $_POST["modifyUserData"];
+    header("location: index.php?P=modifyUserAdmin&I=".$getUID."");
 }
 if(isset($_POST["promoteToOwner"]))
 {
