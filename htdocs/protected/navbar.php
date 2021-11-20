@@ -37,7 +37,7 @@
       </li>
       <?php endif; ?>
       <?php
-        if($_SESSION["permission"] == 1): ?>
+        if($_SESSION["permission"] > 0): ?>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Admin
@@ -52,7 +52,7 @@
       <?php endif; ?>
       <?php if($_SESSION != NULL): ?>
       <li class="nav-item">
-        <a <?php if($_GET['P'] == "editUser"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?>  href="index.php?P=editUser">Adataim <span>[<?php echo $_SESSION["felhasznalonev"]; ?>]</span></a>
+      <a <?php if($_GET['P'] == "editUser"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?>  href="index.php?P=editUser">Adataim <span>[<?php echo $_SESSION["felhasznalonev"]; if($_SESSION["permission"] == 0): echo " - user"; elseif($_SESSION["permission"] == 1): echo " - admin";  else: echo " - owner"; endif;  ?>]</span></a>
       </li>
       
       
