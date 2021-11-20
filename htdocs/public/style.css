@@ -93,18 +93,46 @@
 {
     text-align: center;
 }
-.usersDiv table
+.usersDiv table 
 {
     margin-right: auto;
     margin-left: auto;
     width: 90%;
     border: 2px solid #41023d;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
     font-size: 16px !important;
 }
 .usersDiv table th
 {
     border-bottom: 2px solid #96058c;
+}
+.usersDiv table .list
+{
+    font-size: 20px;
+}
+.usersDiv button
+{
+    margin: 2px;
+    padding: 2px;
+}
+.userStyle, .adminStyle, .ownerStyle
+{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.userStyle
+{
+    color: rgb(11, 87, 11);
+}
+.adminStyle
+{
+    color:rgb(179, 53, 53); 
+}
+.ownerStyle
+{
+    color: rgb(10, 92, 124);
+    
 }
 /*---------------------------END--------------------------*/
