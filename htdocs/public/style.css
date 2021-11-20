@@ -143,7 +143,7 @@
 
 .modifyUserDiv
 {
-    width: 60%;
+    width: 80%;
     height: 20%;
     background-color: #50326648;
     margin-right: auto;
@@ -162,14 +162,37 @@
     margin-left: auto;
     
 }
+.modifyUserDiv table
+{
+    width: 100%;
+}
 .modifyUserDiv table:last-child
 {
-    width: 60%;
+    width: 50%;
 }
 .modifyUserDiv input
 {
     font-size: 16px !important;
     font-weight: 600;
     margin: 5px;width: 100%;
+}
+.custom-control-input:focus ~ .custom-control-label::before 
+{
+    border-color: #c405bb !important;
+    box-shadow: 0 0 0 0rem rgba(0, 0, 0, 0) !important;
+}
+.custom-control-input:checked ~ .custom-control-label::before 
+{
+    border-color: #c405bb !important;
+    background-color: #c405bb !important;
+}
+.custom-control-input:active ~ .custom-control-label::before 
+{
+    background-color: #c405bb !important;
+    border-color: #c405bb !important;
+}
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before 
+{
+    border-color: #c405bb !important;
 }
 /*---------------------------END--------------------------*/
