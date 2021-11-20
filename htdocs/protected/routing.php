@@ -15,7 +15,7 @@ $_GET['P'] = 'home';
 		case 'listUser': isUserLoggedIn() && $_SESSION['permission'] > 0 ? require_once PROTECTED_DIR.'admin/listUser.php' : header('Location: index.php'); break;
 		case 'completedSurveys'  : isUserLoggedIn() ? require_once PROTECTED_DIR.'survey/completed_surveys.php' : header('Location: index.php'); break;
 		case 'topics'  : isUserLoggedIn() ? require_once PROTECTED_DIR.'survey/topics.php' : header('Location: index.php'); break;
-
+		case 'modifyUserAdmin' : isUserLoggedIn() && $_SESSION['permission'] > 0 ? require_once PROTECTED_DIR.'admin/modifyUserFromAdmin.php' : header('Location: index.php'); break;
 		default: require_once PROTECTED_DIR.'404.php'; break;
 	}
 
