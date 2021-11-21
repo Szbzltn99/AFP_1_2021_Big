@@ -87,7 +87,7 @@
                 <?php endif; ?>
                 <td>
                     <button name="fill" value =<?= $row['sid']?>>Kitöltés</button>
-                    <?php if($_SESSION!=NULL): ?>
+                    <?php if($_SESSION!=NULL && !in_array($row['sid'],$newsurveys[0])): ?>
                     <button name="re" value =<?= $row['sid']?>>Folyatás</button>
                     <?php endif; ?>
                 </td>
