@@ -19,7 +19,6 @@
 
     $result = classList($query);
 
-    $n=0;
 
     if (isset($_POST["del"]))
    {
@@ -53,16 +52,16 @@
             <form method="post">
             <thead>
                 <tr>
-                <th>#</th>
+                <th>Azonosító</th>
                 <th>Kérdőív</th>
                 <th>Téma</th>
                 <th>Kérdőív módosításai</th>
                 </tr>
             </thead>
             <tbody>
-            <?php foreach($result as $row): $n=$n+1?>
+            <?php foreach($result as $row): ?>
                 <tr>
-                <td><?=$n?></td>
+                <td><?=$row['sid']?></td>
                 <td><?=$row['sname']?></td>
                 <td><?=$row['name']?></td>
                 <td>
