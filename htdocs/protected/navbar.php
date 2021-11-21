@@ -37,7 +37,7 @@
       </li>
       <?php endif; ?>
       <?php
-        if($_SESSION["permission"] > 0): ?>
+        if($_SESSION!=NULL && $_SESSION["permission"] > 0): ?>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Admin
