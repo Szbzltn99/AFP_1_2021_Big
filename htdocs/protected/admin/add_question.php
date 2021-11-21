@@ -62,6 +62,18 @@ if(isset($_POST["submit"]))
         <?php
         
     }
+    else if(!is_numeric($_POST["answ1"]) or strpos($_POST["answ1"],".")) {
+        ?>
+        <script>
+                Swal.fire(
+                    'Error!',
+                    'Option one is an integer!',
+                    'warning'
+                )
+            </script>
+        <?php
+        
+    }
     
     else if($_POST["answ2"] == null) {
         ?>
@@ -75,6 +87,20 @@ if(isset($_POST["submit"]))
         <?php
         
     }
+
+    else if(!is_numeric($_POST["answ2"]) or strpos($_POST["answ2"],".")) {
+        ?>
+        <script>
+                Swal.fire(
+                    'Error!',
+                    'Option two is an integer!',
+                    'warning'
+                )
+            </script>
+        <?php
+        
+    }
+
     else if($_POST["answ3"] == null) {
         ?>
         <script>
@@ -87,6 +113,20 @@ if(isset($_POST["submit"]))
         <?php
         
     }
+
+    else if(!is_numeric($_POST["answ3"]) or strpos($_POST["answ3"],".")) {
+        ?>
+        <script>
+                Swal.fire(
+                    'Error!',
+                    'Option three is an integer!',
+                    'warning'
+                )
+            </script>
+        <?php
+        
+    }
+
     else{
         $question = $_POST["nev"];
         $answer1 = $_POST["answ1"];
