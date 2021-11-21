@@ -62,6 +62,7 @@ if(isset($_POST["submit"]))
         <?php
         
     }
+    
     else if($_POST["answ2"] == null) {
         ?>
         <script>
@@ -85,6 +86,29 @@ if(isset($_POST["submit"]))
             </script>
         <?php
         
+    }
+    else{
+        $question = $_POST["nev"];
+        $answer1 = $_POST["answ1"];
+        $answer2 = $_POST["answ2"];
+        $answer3 = $_POST["answ3"];
+
+        $add_question_query = "INSERT INTO questions(question, answer1, answer2, answer3) 
+            VALUES('".$question."','".$answer1."','".$answer2."','".$answer3."')";
+        executeQuery($add_question_query);
+        ?>
+        <script>
+                    Swal.fire({
+                    icon: 'success',
+                    title: 'Question succesfully added!',
+                    showConfirmButton: false,
+                    timer: 1500
+                    })
+                    window.setTimeout(function() {
+                    window.location.href = 'index.php?P=addNewQuestion';
+                    }, 1500);
+                </script>
+                <?php
     }
 }
 ?>       
