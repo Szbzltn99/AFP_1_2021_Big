@@ -32,7 +32,10 @@
     $newsurveys = classList($query);
 
     else:
-        
+        $query="SELECT s.sid, s.sname, t.name FROM survey s, topic t
+        WHERE s.topic=t.tid";
+
+        $result = classList($query);
 
     endif;
 
@@ -75,9 +78,9 @@
                 <td><?=$row['sid']?></td>
                 <td><?=$row['sname']?></td>
                 <td><?=$row['name']?></td>
-                <?php if(in_array($row['sid'],$newsurveys[0])):?>
+                <?php if(isset($newsurveys) && in_array($row['sid'],$newsurveys[0])):?>
                 <td>Nincs elkezdve</td>
-                <?php else: ?>
+                <?php elseif(isset($newsurveys)): ?>
                 <td>El van kezdve</td>
                 <?php endif; ?>
                 <td>
