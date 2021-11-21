@@ -62,18 +62,6 @@ if(isset($_POST["submit"]))
         <?php
         
     }
-    else if($_POST["answ1"].is_string($_POST["answ1"]) == true) {
-        ?>
-        <script>
-                Swal.fire(
-                    'Error!',
-                    'The option value one is an integer!',
-                    'warning'
-                )
-            </script>
-        <?php
-    }
-
     else if($_POST["answ2"] == null) {
         ?>
         <script>
@@ -85,17 +73,6 @@ if(isset($_POST["submit"]))
             </script>
         <?php
         
-    }
-    else if($_POST["answ2"].is_string($_POST["answ2"]) == true) {
-        ?>
-        <script>
-                Swal.fire(
-                    'Error!',
-                    'The option value two is an integer!',
-                    'warning'
-                )
-            </script>
-        <?php
     }
 }
 ?>       
