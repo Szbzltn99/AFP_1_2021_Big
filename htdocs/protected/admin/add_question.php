@@ -74,5 +74,17 @@ if(isset($_POST["submit"]))
         <?php
         
     }
+    else if($_POST["answ3"] == null) {
+        ?>
+        <script>
+                Swal.fire(
+                    'Error!',
+                    'You did not enter any answer for option three!',
+                    'warning'
+                )
+            </script>
+        <?php
+        
+    }
 }
 ?>       
