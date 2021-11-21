@@ -73,6 +73,29 @@ if(isset($_POST["submit"]))
             </script>
         <?php
     }
-    
+
+    else if($_POST["answ2"] == null) {
+        ?>
+        <script>
+                Swal.fire(
+                    'Error!',
+                    'You did not enter any answer for option two!',
+                    'warning'
+                )
+            </script>
+        <?php
+        
+    }
+    else if($_POST["answ2"].is_string($_POST["answ2"]) == true) {
+        ?>
+        <script>
+                Swal.fire(
+                    'Error!',
+                    'The option value two is an integer!',
+                    'warning'
+                )
+            </script>
+        <?php
+    }
 }
 ?>       
