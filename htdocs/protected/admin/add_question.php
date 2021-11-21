@@ -38,3 +38,23 @@
                 <button id="submit" type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Mentés </button>
             </form>
         </div>
+
+        <?php 
+
+
+if(isset($_POST["submit"]))
+{
+    if($_POST["nev"] == null) {
+        ?>
+        <script>
+                Swal.fire(
+                    'Error!',
+                    'You did not enter any question!',
+                    'warning'
+                )
+            </script>
+        <?php
+    }
+    
+}
+?>       
