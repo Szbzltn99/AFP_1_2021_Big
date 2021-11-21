@@ -1,4 +1,5 @@
 <?php
+    if($_SESSION!=NULL):
 
     $query = "SELECT surv.sname, top.name, surv.sid FROM survey surv, topic top, 
     (SELECT s.sname, t.name, s.sid FROM survey s, topic t, 
@@ -30,7 +31,10 @@
 
     $newsurveys = classList($query);
 
-    $n=0;
+    else:
+        
+
+    endif;
 
     if (isset($_POST["fill"]))
    {
