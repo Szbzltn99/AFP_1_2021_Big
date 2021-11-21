@@ -68,7 +68,9 @@
                 <th>Azonosító</th>
                 <th>Kérdőív</th>
                 <th>Téma</th>
+                <?php if($_SESSION!=NULL): ?>
                 <th>Kitöltés állapota</th>
+                <?php endif; ?>
                 <th>Művelet</th>
                 </tr>
             </thead>
@@ -85,7 +87,9 @@
                 <?php endif; ?>
                 <td>
                     <button name="fill" value =<?= $row['sid']?>>Kitöltés</button>
+                    <?php if($_SESSION!=NULL): ?>
                     <button name="re" value =<?= $row['sid']?>>Folyatás</button>
+                    <?php endif; ?>
                 </td>
                 </tr>
             <?php endforeach;?>
