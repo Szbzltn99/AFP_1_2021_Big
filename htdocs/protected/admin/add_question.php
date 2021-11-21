@@ -39,6 +39,17 @@ if(isset($_POST["submit"]))
             </script>
         <?php
     }
+    else if($_POST["nev"]> 45){
+        ?>
+        <script>
+                Swal.fire(
+                    'Error!',
+                    'The question you entered is too long! (more than 45 charaters)',
+                    'warning'
+                )
+            </script>
+        <?php
+    }
     
 }
 ?>       
