@@ -17,17 +17,31 @@ if (isset($_POST["themeCreateButton"]) && isset($_POST["topicName"]) && !($_POST
             $ask = "select * from survey where sname like \"" . $_POST["surveyName"] . "\"";
             $result = classList($ask);
             if ($result === NULL || empty($result)) {
+                executeQuery('INSERT INTO survey( sname, topic) VALUES ("' . $_POST["surveyName"] . '","' . $_POST["selectedTopic"] . '")');
                 echo "Kérdőív sikeresen hozzáadva: " . $_POST["surveyName"] . "<br>";
-                executeQuery('INSERT INTO survey( sname, topic) VALUES ("'.$_POST["surveyName"].'","'.$_POST["selectedTopic"].'")');
             } else
                 echo "Kérdőív létrehozása sikertelen, már van ilyen nevű kérdőív..";
-        }
-        else echo "Nincs név megadva!";
-    }
-    else echo "Nincs téma megadva!";
-
+        } else echo "Nincs név megadva!";
+    } else echo "Nincs téma megadva!";
 } elseif (isset($_POST["questionsToAdd"])) {
-    echo "Kérdések hozzáadása a kérdőívhez";
+    if (isset($_POST["selectedSurvey"]) && ($_POST["selectedSurvey"] !== null) && $_POST["selectedSurvey"] != "") {
+        if (isset($_POST["questionsToAdd"]) && !($_POST["questionsToAdd"] === null) && $_POST["questionsToAdd"] != "") {
+            $questions = explode(";", $_POST["questionsToAdd"]);
+            $toEcho = "<br>";
+            for ($i = 0; $i < count($questions) - 1; $i++) {
+                $ask = "select * from survey_question where sid = " . $_POST['selectedSurvey'] . " and qid = " . $questions[$i];
+                $result = classList($ask);
+                if ($result === NULL || empty($result)) {
+                    $toExecute = 'iNSERT INTO survey_question(sid, qid) VALUES (' . $_POST["selectedSurvey"] . ',' . $questions[$i] . ')';
+                    executeQuery($toExecute);
+                    $toEcho .= "" . $questions[$i] . ". kérdés sikeresen hozzáadva ehhez: " . $_POST["selectedSurvey"] . "-es kérdőív<br>";
+                } else {
+                    $toEcho .=  "Nem adtam hozzá a " . $questions[$i] . ". kérdést, mert már hozzá van adva a " .  $_POST["selectedSurvey"] . "-es kérdőívhez..<br>";
+                }
+            }
+            echo $toEcho;
+        } else echo "Nem pipáltál be semmit.";
+    } else echo "Nincs kérdőív kiválasztva!";
 }
 ?>
 <html>
@@ -117,14 +131,14 @@ if (isset($_POST["themeCreateButton"]) && isset($_POST["topicName"]) && !($_POST
                     </tr>
                     <tr>
                         <td style="width: 40%;">
-                            <input placeholder="Kérdőív neve" name = "surveyName" type="text" />
+                            <input placeholder="Kérdőív neve" name="surveyName" type="text" />
                         </td>
                         <td> </td>
                         <td style="width: 40%;">
                             <select name="selectedTopic">
                                 <option disabled selected value=""> Kérlek válassz</option><!-- <optgroup label="Kérdőív téma"> -->
                                 <?php foreach ($listTopicResult as $row) : ?>
-                                    <option  value="<?= $row["tid"] ?>"><?= $row["name"] ?></option>
+                                    <option value="<?= $row["tid"] ?>"><?= $row["name"] ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </td>
@@ -155,7 +169,7 @@ if (isset($_POST["themeCreateButton"]) && isset($_POST["topicName"]) && !($_POST
                         </tr>
                         <tr style="border: transparent">
                             <td>
-                                <select>
+                                <select name="selectedSurvey">
                                     <option disabled selected value=""> Kérlek válassz</option>
                                     <?php foreach ($listSurveyResult as $row) : ?>
                                         <option value='<?= $row["sid"] ?>'><?= $row["sname"] ?></option>
