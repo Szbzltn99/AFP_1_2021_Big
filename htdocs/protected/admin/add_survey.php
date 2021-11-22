@@ -1,3 +1,24 @@
+<?php
+
+if (isset($_POST["themeCreateButton"]) && isset($_POST["topicName"]) && !($_POST["topicName"] === null) && $_POST["topicName"] != "") {
+    $sql = 'INSERT INTO topic(name) VALUES ("';
+    $sqlend = '");';
+    $topicName = $_POST["topicName"];
+    $ask = "select * from topic where name like \"" . $topicName . "\"";
+    $result = classList($ask);
+    //echo $ask;
+    if ($result === NULL || empty($result)) {
+        echo "Téma sikeresen hozzáadva: " . $topicName."<br>";
+
+        executeQuery($sql . $topicName . $sqlend);
+    } else
+        echo "Téma létrehozása sikertelen, már van ilyen.";
+} elseif (isset($_POST["surveyCreateButton"])) {
+    echo "Kérdőív hozzáadása";
+} elseif (isset($_POST["questionsToAdd"])) {
+    echo "Kérdések hozzáadása a kérdőívhez";
+}
+?>
 <html>
 
 <head>
@@ -61,7 +82,7 @@
                     <th scope="col">Téma neve</th>
                 </tr>
                 <tr>
-                    <td> <input placeholder="Téma neve" type="text" /> </td>
+                    <td> <input placeholder="Téma neve" name="topicName" type="text" /> </td>
                 </tr>
                 <tr>
                     <td>
