@@ -6,15 +6,26 @@ if (isset($_POST["themeCreateButton"]) && isset($_POST["topicName"]) && !($_POST
     $topicName = $_POST["topicName"];
     $ask = "select * from topic where name like \"" . $topicName . "\"";
     $result = classList($ask);
-    //echo $ask;
     if ($result === NULL || empty($result)) {
-        echo "Téma sikeresen hozzáadva: " . $topicName."<br>";
-
+        echo "Téma sikeresen hozzáadva: " . $topicName . "<br>";
         executeQuery($sql . $topicName . $sqlend);
     } else
         echo "Téma létrehozása sikertelen, már van ilyen.";
 } elseif (isset($_POST["surveyCreateButton"])) {
-    echo "Kérdőív hozzáadása";
+    if (isset($_POST["selectedTopic"]) && ($_POST["selectedTopic"] !== null) && $_POST["selectedTopic"] != "") {
+        if (isset($_POST["surveyName"]) && !($_POST["surveyName"] === null) && $_POST["surveyName"] != "") {
+            $ask = "select * from survey where sname like \"" . $_POST["surveyName"] . "\"";
+            $result = classList($ask);
+            if ($result === NULL || empty($result)) {
+                echo "Kérdőív sikeresen hozzáadva: " . $_POST["surveyName"] . "<br>";
+                executeQuery('INSERT INTO survey( sname, topic) VALUES ("'.$_POST["surveyName"].'","'.$_POST["selectedTopic"].'")');
+            } else
+                echo "Kérdőív létrehozása sikertelen, már van ilyen nevű kérdőív..";
+        }
+        else echo "Nincs név megadva!";
+    }
+    else echo "Nincs téma megadva!";
+
 } elseif (isset($_POST["questionsToAdd"])) {
     echo "Kérdések hozzáadása a kérdőívhez";
 }
@@ -106,14 +117,14 @@ if (isset($_POST["themeCreateButton"]) && isset($_POST["topicName"]) && !($_POST
                     </tr>
                     <tr>
                         <td style="width: 40%;">
-                            <input placeholder="Kérdőív neve" type="text" />
+                            <input placeholder="Kérdőív neve" name = "surveyName" type="text" />
                         </td>
                         <td> </td>
                         <td style="width: 40%;">
-                            <select>
+                            <select name="selectedTopic">
                                 <option disabled selected value=""> Kérlek válassz</option><!-- <optgroup label="Kérdőív téma"> -->
                                 <?php foreach ($listTopicResult as $row) : ?>
-                                    <option value="<?= $row["tid"] ?>"><?= $row["name"] ?></option>
+                                    <option  value="<?= $row["tid"] ?>"><?= $row["name"] ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </td>
