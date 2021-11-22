@@ -39,7 +39,7 @@
     ?>
     <form method="post" action="">
         <div class="usersDiv" class="container">
-            <h2>Mit szeretne tenni?</h2>
+            <h2>Mit szeretnél tenni?</h2>
             <table class="table">
                 <tr>
                     <th scope="col">Téma hozzáadása</th>
@@ -72,68 +72,105 @@
         </div>
         <div class="usersDiv" id='survey' class="container">
             <h2>Kérdőív létrehozása</h2>
-            <table class="table">
-                <tr>
-                    <th scope="col">Kérdőív neve</th>
-                    <th></th>
-                    <th scope="col">Kérdőív témája</th>
-                </tr>
-                <tr>
-                    <td> <input placeholder="Kérdőív neve" type="text" /> </td>
-                    <td> </td>
-                    <td> <input placeholder="Kérdőív témája" type="text" /> </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type='submit' name="surveyCreateButton" value='Kérdőív Létrehozás'>
-                    </td>
-                    <td></td>
-                </tr>
-            </table>
+            <?php $listTopicResult = classList("sELECT * FROM `topic` WHERE 1"); ?>
+            <?php if ($listTopicResult === NULL || empty($listTopicResult)) : ?>
+                <h2> Nincs megjeleníthető téma, így nem lehet kérdőívet létrehozni.</h2>
+                <h3 style="text-align: center;"> Hozz létre egy témát először!</h3>
+            <?php else : ?>
+                <table class="table">
+                    <tr>
+                        <th scope="col">Kérdőív neve</th>
+                        <th></th>
+                        <th scope="col">Kérdőív témája</th>
+                    </tr>
+                    <tr>
+                        <td style="width: 40%;">
+                            <input placeholder="Kérdőív neve" type="text" />
+                        </td>
+                        <td> </td>
+                        <td style="width: 40%;">
+                            <select>
+                                <option disabled selected value=""> Kérlek válassz</option><!-- <optgroup label="Kérdőív téma"> -->
+                                <?php foreach ($listTopicResult as $row) : ?>
+                                    <option value="<?= $row["tid"] ?>"><?= $row["name"] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type='submit' name="surveyCreateButton" value='Kérdőív Létrehozás'>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            <?php endif; ?>
         </div>
         <div class="usersDiv" hidden id='questionsDiv' class="container">
             <?php if ($listQuestionsResult === NULL || empty($listQuestionsResult)) : ?>
                 <h2>Nincs egyetlen kérdés sem!</h2>
             <?php else : ?>
-                <h2>Kérdések listája</h2>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Kérdés</th>
-                            <th scope="col">Válasz 1</th>
-                            <th scope="col">Válasz 2</th>
-                            <th scope="col">Válasz 3</th>
-                            <th scope="col">Hozzáadás</th>
-                            <th scope="col">Hozzáadási Sorrend</th>
+                <?php $listSurveyResult = classList("sELECT * FROM `survey` WHERE 1"); ?>
+                <?php if ($listSurveyResult === NULL || empty($listSurveyResult)) : ?>
+                    <h2> Nincs megjeleníthető kérdőív, így nem tudod mihez hozzá adni a kérdéseket.</h2>
+                <?php else : ?>
+                    <table class="table" style="border:transparent">
+                        <tr style="border: transparent">
+                            <th style="border:transparent">
+                                Kérdőív kiválasztása:
+                            </th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($listQuestionsResult as $row) : ?>
-                            <tr scope="row" class="list">
-                                <td scope="row"><?= $row['qid'] ?></td>
-                                <td scope="row"><?= $row['question'] ?></td>
-                                <td scope="row"><?= $row['answer1'] ?></td>
-                                <td scope="row"><?= $row['answer2'] ?></td>
-                                <td scope="row"><?= $row['answer3'] ?></td>
-                                <td> <input type="checkbox" onclick="markQuestion('<?= $row['qid'] ?>')" id='checkbox<?= $row['qid'] ?>' value="<?= $row['qid'] ?>"></input> </td>
-                                <td class='order' id='<?= "order" . $row['qid'] ?>'> </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-                <table class="table" style="border:transparent;">
-                    <tr>
-                        <td>
-                            <input type="submit" name="questionsAddButton" value="Kérdések hozzáadása">
-                        </td>
-                    </tr>
-                </table>
+                        <tr style="border: transparent">
+                            <td>
+                                <select>
+                                    <option disabled selected value=""> Kérlek válassz</option>
+                                    <?php foreach ($listSurveyResult as $row) : ?>
+                                        <option value='<?= $row["sid"] ?>'><?= $row["sname"] ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </td>
+                        </tr>
 
-                <input id='questions' name='questionsToAdd' value="" hidden placeholder="Hidden lesz"></input>
-            <?php endif; ?>
+                        <h2>Kérdések listája</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Kérdés</th>
+                                    <th scope="col">Válasz 1</th>
+                                    <th scope="col">Válasz 2</th>
+                                    <th scope="col">Válasz 3</th>
+                                    <th scope="col">Hozzáadás</th>
+                                    <th scope="col">Hozzáadási Sorrend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($listQuestionsResult as $row) : ?>
+                                    <tr scope="row" class="list">
+                                        <td scope="row"><?= $row['qid'] ?></td>
+                                        <td scope="row"><?= $row['question'] ?></td>
+                                        <td scope="row"><?= $row['answer1'] ?></td>
+                                        <td scope="row"><?= $row['answer2'] ?></td>
+                                        <td scope="row"><?= $row['answer3'] ?></td>
+                                        <td> <input type="checkbox" onclick="markQuestion('<?= $row['qid'] ?>')" id='checkbox<?= $row['qid'] ?>' value="<?= $row['qid'] ?>"></input> </td>
+                                        <td class='order' id='<?= "order" . $row['qid'] ?>'> </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                        <table class="table" style="border:transparent;">
+                            <tr>
+                                <td>
+                                    <input type="submit" name="questionsAddButton" value="Kérdések hozzáadása">
+                                </td>
+                            </tr>
+                        </table>
+                        <input id='questions' name='questionsToAdd' value="" hidden placeholder="Hidden lesz"></input>
+                    <?php endif; ?>
+                <?php endif; ?>
         </div>
+
     </form>
 </body>
 
