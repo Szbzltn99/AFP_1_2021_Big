@@ -19,7 +19,7 @@
           Témakörök
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        
+          <a <?php if($_GET['P'] == "answerJustSurvey"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=answerJustSurvey">Új kérdőív megválaszolása</a>
           <a <?php if($_GET['P'] == "answerSurvey"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=answerSurvey">Új témakör megválaszolása</a>
           <?php if($_SESSION != NULL): ?>
           <a <?php if($_GET['P'] == "topics"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=topics">Témakörök megtekintése</a>
