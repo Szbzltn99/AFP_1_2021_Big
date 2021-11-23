@@ -1,10 +1,36 @@
 <?php
+if (isset($_POST["names"])) {
+    $names = explode(";", $_POST["names"]);
+    $values = array();
+    $counter = 0;
+    foreach ($names as $name) {
+        $num = "qid_" . $name;
+        $ans =  $_POST["$num"];
+        if ($ans != "") {
+            if ($name != "") {
+                if (isUserLoggedIn()) {
+                    $userId = isUserLoggedIn();
+                    $uploadans = "";
+                } else {
+                    $userId = -1;
+                    $uploadans = "";
+                }
+                $sid = $_POST["sid"];
+                $sql = "INSERT INTO user_survey(sid, uid, answer, questionid) VALUES ($sid,$userId,$ans,$name)"; //át tudom írni úgy, hogy csak akkor rögzítse az adatokat ha minden rádiógomb esetében választott
+                //viszont így meg majd "lehet folytatni" a félbehagyott survey-t
+                executeQuery($sql);
+            }
+        }
+
+        $counter++;
+    }
+    echo "<br>Válaszaidat sikeresen rögzítettük.<br>";
+}
 
 if (isset($_POST["selectedSurvey"])) {
     $surveyID =  $_POST["selectedSurvey"];
     $sql = "select * from questions, survey_question, survey where survey_question.qid = questions.qid and survey_question.sid = $surveyID and survey.sid = survey_question.sid";
-    
-    echo $sql;
+    //echo $sql;
     $questions = classList($sql);
     if ($questions === NULL || empty($questions)) {
         echo "Nincs kérdés";
@@ -22,6 +48,8 @@ if (isset($_POST["selectedSurvey"])) {
         ";
         $names = "";
         foreach ($questions as $questionsRow) {
+            $sid = $questionsRow["sid"];
+            echo "<input type = 'text' hidden value = '$sid' name ='sid'>";
             $oneQuestion = $questionsRow["question"];
             $a1 = $questionsRow["answer1"];
             $a2 = $questionsRow["answer2"];
@@ -32,16 +60,16 @@ if (isset($_POST["selectedSurvey"])) {
             echo $oneQuestion;
             echo "</td>";
             echo "<td>";
-            echo "<input type = 'radio' name = '$qid' value = '$a1'> $a1 ";
+            echo "<input type = 'radio' name = 'qid_$qid' value = '$a1'> $a1 ";
             echo "</td>";
             echo "<td>";
-            echo "<input type = 'radio' name = '$qid' value = '$a2'> $a2";
+            echo "<input type = 'radio' name = 'qid_$qid' value = '$a2'> $a2";
             echo "</td>";
             echo "<td>";
-            echo "<input type = 'radio' name = '$qid' value = '$a3'> $a3 ";
+            echo "<input type = 'radio' name = 'qid_$qid' value = '$a3'> $a3 ";
             echo "</td>";
             echo "</tr>";
-            $names .= $qid.";";
+            $names .= $qid . ";";
         }
         echo "<input type = 'text' value = '$names' name = 'names' hidden>";
         echo "
@@ -57,12 +85,13 @@ if (isset($_POST["selectedSurvey"])) {
     if (isUserLoggedIn()) {
         $userId = isUserLoggedIn();
         $topics = "select * from topic, (SELECT * FROM survey s WHERE s.sid NOT IN (SELECT u.sid FROM user_survey u WHERE u.sid = $userId )) need where topic = topic.tid ";
+        //$topics = "select * from survey,topic this where sid not in (select survey_question.sid FROM survey_question LEFT JOIN user_survey USING (sid) WHERE user_survey.uid = 1 Group by survey_question.sid) group by sid";
     } else {
         $userId = -1;
         $topics = "select * from topic where 1";
     }
     $result = classList($topics);
-    //echo "Lekérdezem a témákat: " . $topics . "<br><br>";
+    echo "<div hidden>Lekérdezem a témákat: " . $topics . "<br><br></div>";
     $topics = array();
     $topicName = array();
     $couter = 0;
