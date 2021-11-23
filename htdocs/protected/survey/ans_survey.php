@@ -18,6 +18,9 @@ if (isset($_POST["names"])) {
                 $sid = $_POST["sid"];
                 $sql = "INSERT INTO user_survey(sid, uid, answer, questionid) VALUES ($sid,$userId,$ans,$name)"; //át tudom írni úgy, hogy csak akkor rögzítse az adatokat ha minden rádiógomb esetében választott
                 //viszont így meg majd "lehet folytatni" a félbehagyott survey-t
+                //TODO: Az oldal "alap megjelenéséhez" az sql parancsot kijavítani, jelenleg nem szűr rendesen.
+                //A cél az, hogy a szűrése csak azokat a kérdőíveket mutassa amikhez még nincs a felhasználónak válasza.
+                //TODO: A feltöltés ellenőrizhetné azt, hogy nincs-e már véletlen válasza a felhasználónak ehhez a kérdéshez ugyanebben a kérdőívben.
                 executeQuery($sql);
             }
         }
