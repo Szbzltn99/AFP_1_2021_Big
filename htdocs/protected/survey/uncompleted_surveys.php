@@ -1,5 +1,17 @@
 <?php
-    if($_SESSION!=NULL):
+    if($_SESSION!=NULL)
+    {
+        $query = "SELECT * FROM user_survey u WHERE u.uid=" . $_SESSION["uid"];
+    $result=classList($query);
+    
+    if($result === NULL || empty($result))
+    {
+        $query = "SELECT * FROM survey, topic WHERE survey.topic=topic.tid";
+        $result=classList($query);
+        $newsurveys=NULL;
+    }
+    else
+    {
 
     $query = "SELECT surv.sname, top.name, surv.sid FROM survey surv, topic top, 
     (SELECT s.sname, t.name, s.sid FROM survey s, topic t, 
@@ -28,16 +40,18 @@
     (SELECT u.sid FROM user_survey u
     WHERE u.sid = " . $_SESSION["uid"] . "
     )";
+    
 
     $newsurveys = classList($query);
-
-    else:
+    }
+    }
+/*
+    else
         $query="SELECT s.sid, s.sname, t.name FROM survey s, topic t
         WHERE s.topic=t.tid";
 
         $result = classList($query);
-
-    endif;
+*/
 
     if (isset($_POST["fill"]))
    {
@@ -68,7 +82,7 @@
                 <th>Azonosító</th>
                 <th>Kérdőív</th>
                 <th>Téma</th>
-                <?php if($_SESSION!=NULL): ?>
+                <?php if($_SESSION!=NULL && $newsurveys!=NULL): ?>
                 <th>Kitöltés állapota</th>
                 <?php endif; ?>
                 <th>Művelet</th>
@@ -80,14 +94,14 @@
                 <td><?=$row['sid']?></td>
                 <td><?=$row['sname']?></td>
                 <td><?=$row['name']?></td>
-                <?php if(isset($newsurveys) && in_array($row['sid'],$newsurveys[0])):?>
+                <?php if($newsurveys!=NULL && isset($newsurveys) && in_array($row['sid'],$newsurveys[0])):?>
                 <td>Nincs elkezdve</td>
                 <?php elseif(isset($newsurveys)): ?>
                 <td>El van kezdve</td>
                 <?php endif; ?>
                 <td>
                     <button name="fill" value =<?= $row['sid']?>>Kitöltés</button>
-                    <?php if($_SESSION!=NULL && !in_array($row['sid'],$newsurveys[0])): ?>
+                    <?php if($newsurveys!=NULL && $_SESSION!=NULL && !in_array($row['sid'],$newsurveys[0])): ?>
                     <button name="re" value =<?= $row['sid']?>>Folyatás</button>
                     <?php endif; ?>
                 </td>
