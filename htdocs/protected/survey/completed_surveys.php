@@ -1,16 +1,6 @@
 <?php
 
-    $query = "SELECT * FROM user_survey u WHERE u.uid=" . $_SESSION["uid"];
-    $result=classList($query);
-    var_dump($result);
-    if($result === NULL || empty($result))
-    {
-        $query = "SELECT * FROM survey";
-        $result=classList($query);
-    }
-    else
-    {
-        $query = "SELECT s.sname, t.name, s.sid FROM survey s, topic t, 
+    $query = "SELECT s.sname, t.name, s.sid FROM survey s, topic t, 
     (SELECT t.sid, t.uid FROM 
     (
     SELECT us.sid,us.uid,COUNT(us.questionid) q_db FROM 
@@ -28,10 +18,6 @@
     AND s.topic=t.tid;";
 
     $result = classList($query);
-
-    }
-
-    
 
 
     if (isset($_POST["del"]))
