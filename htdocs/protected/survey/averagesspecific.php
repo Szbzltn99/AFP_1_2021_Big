@@ -14,3 +14,7 @@ function get_g(){
 
 }
 $id = get_g();
+?>
+<div class="container">
+    <h1>Az <?=$id?>. azonosítójú kérdőívhez tartozó kérdések</h1>
+</div>
