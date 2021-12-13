@@ -18,6 +18,9 @@ $id = get_g();
 <?php
 $query = "SELECT * FROM questions INNER JOIN survey_question ON survey_question.qid = questions.qid AND survey_question.sid = $id";
 $listQuestionResults = classList($query);
+$answerCountQuery = "SELECT COUNT(answer1), COUNT(answer2), COUNT(answer3) FROM questions";
+$answerCountQueryResult = classList($answerCountQuery);
+
 ?>
 <div class="container" class="usersDiv">
     <?php if ($listQuestionResults === NULL || empty($listQuestionResults)) : ?>
@@ -27,19 +30,23 @@ $listQuestionResults = classList($query);
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Azonosító</th>
                     <th scope="col">Kérdés</th>
-                    <th scope="col">Átlag válasz</th>
+                    <th scope="col">Átlag válaszok értéke</th>
                 </tr>
             </thead>
             <tbody>
                 <form method="post">
                     <?php foreach ($listQuestionResults as $row) : ?>
                         <tr scope="row" class="list">
-                            <td scope="row"><?= $row['qid'] ?> </td>
                             <td scope="row"><?= $row['question'] ?></td>
-                            <td scope="row"><?= $row['topic'] ?></td>
+                            <td scope="row">
+                                <?php
+                                $asd = "SELECT COUNT(answer), answer FROM user_survey WHERE questionid= " . $row['qid'] . " GROUP BY user_survey.answer ORDER BY COUNT(answer) DESC LIMIT 1";
+                                $asdResult = classList($asd);
+                                ?>
+                            <td scope="row"><?= $asdResult[0]['answer'] ?></td>
 
+                            </td>
                         </tr>
                     <?php endforeach; ?>
             </tbody>
