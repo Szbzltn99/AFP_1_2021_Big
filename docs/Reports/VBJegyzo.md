@@ -20,3 +20,5 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 15 | Bejelentkezés | Oldal betöltés sikertenel bejelentkezés után | Sikertelen | szintaktikai hiba miatt az oldal nem töltött be egy másikra | Vereb Barna | 2021.10.03
 16 | Bejelentkezés | Bejelentkezés után a bejelentkező adatai elmentődnek | Siker | külön változókban van eltárolva a felhasználók adatai | Vereb Barna | 2021.10.03
 17 |Téma rögzítése adminként felület megjelenése | Az oldal sikeresen megjelenik | Siker | - | Vereb Barna | 2021.10.03
+18 | Új Téma rögzítése adminként | Helyes adatokkal ezek feltöltése | Siker | - | Vereb Barna | 2021.10.03
+19 | Új Téma rögzítése adminként helytelen adatokkal | Az adatok feltöltésének nem kellene teljesülnie helytelen adatokkal | Siker | Nem írja ki, hogy nem töltötte fel. Kiírhatná. | Vereb Barna | 2021.10.03
