@@ -31,3 +31,10 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 26 | Új kérdés rögzítése adminként helytelen adatokkal figyelmeztetés | Az adatok feltöltésének nem kellene teljesülnie helytelen adatokkal | Siker | Nem figyelmeztet, hogy nem töltött fel semmit | Ács Róbert | 2021.12.12
 27 | kérdés felvétele az kérdésekbe | Ezen az oldalon a megfelelő gombra kattintva eltárolja az adatbázisban, hogy nekem van ilyen órám | Siker | - | Ács Róbert | 2021.12.12
 28 | Megválaszolt kérdések megjelenítése | kérdés megjelenik, minden megválaszolt kérdőívet olvashatóan, átláthatóan lehet értelmezni | Siker | - | Ács Róbert | 2021.12.12
+29 | Megválaszolt kérdések megjelenítése kérdésütközés esetén | kérdés megjelenik, minden megválaszolt kérdőívet olvashatóan, átláthatóan lehet értelmezni akkor is, ha kérdésütközés történik | Sikertelen | Egybe folyik a szöveg elválasztás nélkül | Ács Róbert | 2021.12.12
+30 | Megválaszolt kérdések megjelenítése kérdésütközés esetén (új teszt) | kérdések megjelenik, minden megválaszolt kérdőívet olvashatóan, átláthatóan lehet értelmezni akkor is, ha kérdésütközés történik | Sikeres | Egy [Enter] hiány volt | Ács Róbert | 2021.12.12
+31 | Tárgy törlése jogosultság nélkül | Az oldal nem jelenik meg az admin jog hiányában | Siker | - | Ács Róbert | 2021.12.13
+32 | Tárgy törlése jogosultsággal | Az oldal megfelelően működik | Siker | - | Ács Róbert | 2021.12.13
+33 | kérdés törlése a rendszerből, ami fel van véve az kérdésrendbe | SQL hiba | Sikertelen | A hibát a kapcsolótábla okozta, először onnan kell törölni | Ács Róbert | 2021.12.13
+34 | kérdés törlése a rendszerből, ami fel van véve az kérdésrendbe | SQL hiba javítva | Siker | - | Ács Róbert | 2021.12.13
+35 | Adott kérdés adatainak szerkesztése | A szerkesztés megfelelően működött | Siker | - | Ács Róbert | 2021.12.13
