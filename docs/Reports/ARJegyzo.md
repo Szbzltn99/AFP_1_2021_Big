@@ -38,3 +38,8 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 33 | kérdés törlése a rendszerből, ami fel van véve az kérdésrendbe | SQL hiba | Sikertelen | A hibát a kapcsolótábla okozta, először onnan kell törölni | Ács Róbert | 2021.12.13
 34 | kérdés törlése a rendszerből, ami fel van véve az kérdésrendbe | SQL hiba javítva | Siker | - | Ács Róbert | 2021.12.13
 35 | Adott kérdés adatainak szerkesztése | A szerkesztés megfelelően működött | Siker | - | Ács Róbert | 2021.12.13
+36 | Adott kérdés adatainak szerkesztése jogosultásgok nélkül | A szerkesztés menüpont nem elérhető felhasználóként| Siker | - | Ács Róbert | 2021.12.13
+37 | Adott kérdés adatainak szerkesztése string tipusú idvel | Az oldal ellenőrizte, hogy a paraméterként kapott id int-e| Siker | - | Ács Róbert | 2021.12.13
+38 | Adott kérdés adatainak szerkesztése negatív idvel | A negatív paraméter kezelve volt | Sikeres | Paraméter vizsgálattal könnyen megoldható | Ács Róbert | 2021.12.14
+39 | Adott kérdés adatainak szerkesztése negatív idvel | A negatív számok vizsgálata hozzáadva a paraméterhez  | Siker | - | Ács Róbert | 2021.12.14
+40 | Felhasználói adatok szerkesztése, jelszó változtatása | Jelszó változtatás | Siker | - | Ács Róbert | 2021.12.14 
