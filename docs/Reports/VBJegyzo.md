@@ -11,3 +11,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 6 | Admin felület | A felhasználók hibamentesen vannak listázva | Sikertelen | A bejelentkezett admin felhasználót is kilistázta, hibás volt a lekérdezés | Vereb Barna | 2021.12.14
 7 | Admin felület | A felhasználókat lehet törölni az adatbázisból | Siker | - | Vereb Barna | 2021.12.14
 8 | Admin felület | Új témát lehet hozzáadni az adatbázishoz | Siker | - | Vereb Barna | 2021.12.14
+9 | Oldal fejléc megjelenése | A fejléc reszponzív | Siker | - | Vereb Barna | 2021.12.14
