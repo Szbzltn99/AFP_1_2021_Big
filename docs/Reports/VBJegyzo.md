@@ -10,3 +10,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 5 | Téma felvétel | A felhasználó sikeresen fel tudja venni a Téma | Siker | - | Vereb Barna | 2021.12.14
 6 | Admin felület | A felhasználók hibamentesen vannak listázva | Sikertelen | A bejelentkezett admin felhasználót is kilistázta, hibás volt a lekérdezés | Vereb Barna | 2021.12.14
 7 | Admin felület | A felhasználókat lehet törölni az adatbázisból | Siker | - | Vereb Barna | 2021.12.14
+8 | Admin felület | Új témát lehet hozzáadni az adatbázishoz | Siker | - | Vereb Barna | 2021.12.14
