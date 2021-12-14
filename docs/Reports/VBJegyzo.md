@@ -13,3 +13,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 8 | Admin felület | Új témát lehet hozzáadni az adatbázishoz | Siker | - | Vereb Barna | 2021.12.14
 9 | Oldal fejléc megjelenése | A fejléc reszponzív | Siker | - | Vereb Barna | 2021.12.14
 10 | Oldal fejléc megjelenése | Adott oldalon levő menüpont osztály aktívvá tétele | Sikertelen | feltételeket kellett beletenni, hogy működjön | Vereb Barna | 2021.12.14
+11 | Oldal fejléc megjelenése | Minden oldal elérhető ami a menüponton található | Siker | - | Vereb Barna | 2021.12.14
