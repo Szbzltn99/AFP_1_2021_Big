@@ -33,3 +33,7 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 28 | Adott kérdőív adatainak szerkesztése | A szerkesztés megfelelően működött | Siker | - | Vereb Barna | 2021.12.14
 29 | Adott kérdőív adatainak szerkesztése jogosultásgok nélkül | A szerkesztés menüpont nem elérhető felhasználóként| Siker | - | Vereb Barna | 2021.12.14
 30 | Adott kérdőív adatainak szerkesztése string tipusú idvel | Az oldal ellenőrizte, hogy a paraméterként kapott id int-e| Siker | - | Vereb Barna | 2021.12.14
+31 | Adott kérdőív adatainak szerkesztése negatív idvel | A negatív paraméter nem volt kezelve | Sikertelen | Paraméter vizsgálattal könnyen megoldható | Vereb Barna | 2021.12.14
+32 | Adott kérdőív adatainak szerkesztése negatív idvel | A negatív számok vizsgálata hozzáadva a paraméterhez  | Siker | - | Vereb Barna | 2021.12.14
+33 | Felhasználói adatok szerkesztése, jelszó változtatása | Jelszó változtatás | Siker | - | Vereb Barna | 2021.12.14
+34 | Felhasználói adatok szerkesztése, email változtatása | Email változtatás | Siker | Az email cím változtatás megtörtént, a régi email cím mező nem frissül | Vereb Barna | 2021.12.14
