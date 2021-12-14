@@ -22,3 +22,6 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 17 |Téma rögzítése adminként felület megjelenése | Az oldal sikeresen megjelenik | Siker | - | Vereb Barna | 2021.10.03
 18 | Új Téma rögzítése adminként | Helyes adatokkal ezek feltöltése | Siker | - | Vereb Barna | 2021.10.03
 19 | Új Téma rögzítése adminként helytelen adatokkal | Az adatok feltöltésének nem kellene teljesülnie helytelen adatokkal | Siker | Nem írja ki, hogy nem töltötte fel. Kiírhatná. | Vereb Barna | 2021.10.03
+20 | Kérdőív felvétele | Ezen az oldalon a megfelelő gombra kattintva eltárolja az adatbázisban| Siker | - | Vereb Barna | 2021.10.03
+21 | Kérdőív megjelenítése | Kérdőív megjelenik, minden felvett kérdőív olvashatóan, átláthatóan lehet értelmezni | Siker | - | Vereb Barna | 2021.10.03
+22 | Kérdőív megjelenítése| Órarendem megjelenik, minden felvett kérdőív olvashatóan, átláthatóan lehet értelmezni akkor is, ha nincs kérdés | Sikertelen | Egybe folyik a szöveg elválasztás nélkül | Vereb Barna | 2021.10.03
