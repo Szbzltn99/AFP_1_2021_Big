@@ -22,3 +22,8 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 17 | Oldal fejléc megjelenése | A fejléc reszponzív | Siker | - | Boldizsár Balázs | 2021.12.14
 18 | Oldal fejléc megjelenése | Adott oldalon levő menüpont osztály aktívvá tétele | Sikertelen | feltételeket kellett beletenni, hogy működjön | Boldizsár Balázs | 2021.12.14
 19 | Oldal fejléc megjelenése | Minden oldal elérhető ami a menüponton található | Siker | - | Boldizsár Balázs | 2021.12.14
+20 | Új téma rögzítése adminként | Hiba esetén hibát dobott a feltöltés során a rendszer | Siker | - | Boldizsár Balázs | 2021.12.14
+21 | Új téma rögzítése adminként | Az admin sikeresen feltöltötte a témát | Siker | - | Boldizsár Balázs | 2021.12.14
+22 | Új kérdés megválaszolása | Megkezdett kérdés esetén be van automatikusan pipálva a már megválaszolt kérdés | Sikertelen | - | Boldizsár Balázs | 2021.12.14
+23 | Új kérdés megválaszolása | A felhasználó sikeresen meg tudja válaszolni a kérdéseket | Siker | - | Boldizsár Balázs | 2021.12.14
+24 | Tárgy törlése jogosultság nélkül | Az oldal nem jelenik meg az admin jog hiányában | Siker | - | Boldizsár Balázs | 2021.12.14
