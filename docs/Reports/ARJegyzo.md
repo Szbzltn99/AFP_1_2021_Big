@@ -27,3 +27,7 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 22 | Bejelentkezés | Oldal betöltés sikertenel bejelentkezés után | Sikertelen | szintaktikai hiba miatt az oldal nem töltött be egy másikra | Ács Róbert | 2021.12.12
 23 | Bejelentkezés | Bejelentkezés után a bejelentkező adatai elmentődnek | Siker | külön változókban van eltárolva a felhasználók adatai | Ács Róbert | 2021.12.12
 24 | Új kérdés rögzítése adminként felület megjelenése | Az oldal sikeresen megjelenik | Siker | - | Ács Róbert | 2021.12.12
+25 | Új kérdés rögzítése adminként helytelen adatokkal | Az adatok feltöltésének nem kellene teljesülnie helytelen adatokkal | Siker | Nem írja ki, hogy nem töltötte fel. Kiírhatná. | Ács Róbert | 2021.12.12
+26 | Új kérdés rögzítése adminként helytelen adatokkal figyelmeztetés | Az adatok feltöltésének nem kellene teljesülnie helytelen adatokkal | Siker | Nem figyelmeztet, hogy nem töltött fel semmit | Ács Róbert | 2021.12.12
+27 | kérdés felvétele az kérdésekbe | Ezen az oldalon a megfelelő gombra kattintva eltárolja az adatbázisban, hogy nekem van ilyen órám | Siker | - | Ács Róbert | 2021.12.12
+28 | Megválaszolt kérdések megjelenítése | kérdés megjelenik, minden megválaszolt kérdőívet olvashatóan, átláthatóan lehet értelmezni | Siker | - | Ács Róbert | 2021.12.12
