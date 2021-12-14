@@ -17,3 +17,10 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 12 | Kérdés megválaszolás | A felhasználó sikeresen meg tudja válaszolni a kérdéseket | Siker | - | Ács Róbert | 2021.12.12
 13 | Admin felület | A felhasználók hibamentesen vannak listázva | Sikertelen | A bejelentkezett admin felhasználót is kilistázta, hibás volt a lekérdezés | Ács Róbert | 2021.12.12
 14 | Admin felület | A felhasználókat lehet törölni az adatbázisból | Siker | - | Ács Róbert | 2021.12.12
+15 | Admin felület | Új témát, kérdőívet és kérdést lehet hozzáadni az adatbázishoz | Siker | - | Ács Róbert | 2021.12.12
+16 | Oldal fejléc megjelenése | A fejléc reszponzív | Siker | - | Ács Róbert | 2021.12.12
+17 | Oldal fejléc megjelenése | Adott oldalon levő menüpont osztály aktívvá tétele | Sikertelen | feltételeket kellett beletenni, hogy működjön | Ács Róbert | 2021.12.12
+18 | Oldal fejléc megjelenése | Minden oldal elérhető ami a menüponton található | Siker | - | Ács Róbert | 2021.12.12
+19 | Bejelentkezés | A bejelentkező oldal megjelenik | Siker | - | Ács Róbert | 2021.12.12
+20 | Bejelentkezés | A bejelentkezés rossz adatok esetén nem működik | Siker | - | Ács Róbert | 2021.12.12
+21 | Bejelentkezés | Helyes adatok esetén a bejelentkezés sikeres | Siker | - | Ács Róbert | 2021.12.12
