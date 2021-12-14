@@ -8,3 +8,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 3 | Regisztráció | Helyes adatok esetén, minden mező kitöltése esetén a regisztráció sikeres | Siker | - | Vereb Barna | 2021.12.14
 4 | Téma felvétel | A Téma oldal megjelenik, listázza a Téma | Sikertelen | A hibát az SQL kód helytelen szintaxisa okozta | Vereb Barna | 2021.12.14
 5 | Téma felvétel | A felhasználó sikeresen fel tudja venni a Téma | Siker | - | Vereb Barna | 2021.12.14
+6 | Admin felület | A felhasználók hibamentesen vannak listázva | Sikertelen | A bejelentkezett admin felhasználót is kilistázta, hibás volt a lekérdezés | Vereb Barna | 2021.12.14
