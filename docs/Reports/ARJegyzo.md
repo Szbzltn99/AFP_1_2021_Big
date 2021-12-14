@@ -12,3 +12,8 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 7 | kérdések megjelenítése kérdésütközés esetén (új teszt) | kérdések megjelennek, minden megválaszolt kérdőívet olvashatóan, átláthatóan lehet értelmezni akkor is, ha kérdésütközés történik | Sikeres | Egy [Enter] hiány volt] | Ács Róbert | 2021.12.12
 8 | Regisztráció | A regisztrációs oldal megjelenik | Siker | - | Ács Róbert | 2021.12.12
 9 | Regisztráció | A regisztráció rossz adatok esetén nem működik | Siker | - | Ács Róbert | 2021.12.12
+10 | Regisztráció | Helyes adatok esetén, minden mező kitöltése esetén a regisztráció sikeres | Siker | - | Ács Róbert | 2021.12.12
+11 | Kérdés megválaszolás | A kérdés megválaszoló oldal megjelenik, listázza a kérdéseket | Sikertelen | A hibát az SQL kód helytelen szintaxisa okozta | Ács Róbert | 2021.12.12
+12 | Kérdés megválaszolás | A felhasználó sikeresen meg tudja válaszolni a kérdéseket | Siker | - | Ács Róbert | 2021.12.12
+13 | Admin felület | A felhasználók hibamentesen vannak listázva | Sikertelen | A bejelentkezett admin felhasználót is kilistázta, hibás volt a lekérdezés | Ács Róbert | 2021.12.12
+14 | Admin felület | A felhasználókat lehet törölni az adatbázisból | Siker | - | Ács Róbert | 2021.12.12
