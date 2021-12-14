@@ -20,3 +20,12 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 15 | Bejelentkezés | Oldal betöltés sikertenel bejelentkezés után | Sikertelen | szintaktikai hiba miatt az oldal nem töltött be egy másikra | Vereb Barna | 2021.10.03
 16 | Bejelentkezés | Bejelentkezés után a bejelentkező adatai elmentődnek | Siker | külön változókban van eltárolva a felhasználók adatai | Vereb Barna | 2021.10.03
 17 |Téma rögzítése adminként felület megjelenése | Az oldal sikeresen megjelenik | Siker | - | Vereb Barna | 2021.10.03
+18 | Új Téma rögzítése adminként | Helyes adatokkal ezek feltöltése | Siker | - | Vereb Barna | 2021.10.03
+19 | Új Téma rögzítése adminként helytelen adatokkal | Az adatok feltöltésének nem kellene teljesülnie helytelen adatokkal | Siker | Nem írja ki, hogy nem töltötte fel. Kiírhatná. | Vereb Barna | 2021.10.03
+20 | Kérdőív felvétele | Ezen az oldalon a megfelelő gombra kattintva eltárolja az adatbázisban| Siker | - | Vereb Barna | 2021.10.03
+21 | Kérdőív megjelenítése | Kérdőív megjelenik, minden felvett kérdőív olvashatóan, átláthatóan lehet értelmezni | Siker | - | Vereb Barna | 2021.10.03
+22 | Kérdőív megjelenítése| Órarendem megjelenik, minden felvett kérdőív olvashatóan, átláthatóan lehet értelmezni akkor is, ha nincs kérdés | Sikertelen | Egybe folyik a szöveg elválasztás nélkül | Vereb Barna | 2021.10.03
+23 | Kérdőív megjelenítése (új teszt) | Kérdőív megjelenik, minden felvett Kérdőív olvashatóan, átláthatóan lehet értelmezni akkor is, ha nincs kérdés | Sikeres | Egy [Enter] hiány volt] | Vereb Barna | 2021.10.03
+24 | Téma törlése jogosultság nélkül | Az oldal nem jelenik meg az admin jog hiányában | Siker | - | Vereb Barna | 2021.12.14
+25 | Kérdőív törlése jogosultsággal | Az oldal megfelelően működik | Siker | - | Vereb Barna | 2021.12.14
+26 | Kérdés törlése a rendszerből, ami fel van véve kérdéshez | SQL hiba | Sikertelen | A hibát a kapcsolótábla okozta, először onnan kell törölni | Vereb Barna | 2021.12.14
