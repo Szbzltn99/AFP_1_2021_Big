@@ -16,3 +16,5 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 11 | Oldal fejléc megjelenése | Minden oldal elérhető ami a menüponton található | Siker | - | Vereb Barna | 2021.12.14
 12 | Bejelentkezés | A bejelentkező oldal megjelenik | Siker | - | Vereb Barna | 2021.10.03
 13 | Bejelentkezés | A bejelentkezés rossz adatok esetén nem működik | Siker | - | Vereb Barna | 2021.10.03
+14 | Bejelentkezés | Helyes adatok esetén a bejelentkezés sikeres | Siker | - | Vereb Barna | 2021.10.03
+15 | Bejelentkezés | Oldal betöltés sikertenel bejelentkezés után | Sikertelen | szintaktikai hiba miatt az oldal nem töltött be egy másikra | Vereb Barna | 2021.10.03
