@@ -29,3 +29,7 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 24 | Téma törlése jogosultság nélkül | Az oldal nem jelenik meg az admin jog hiányában | Siker | - | Vereb Barna | 2021.12.14
 25 | Kérdőív törlése jogosultsággal | Az oldal megfelelően működik | Siker | - | Vereb Barna | 2021.12.14
 26 | Kérdés törlése a rendszerből, ami fel van véve kérdéshez | SQL hiba | Sikertelen | A hibát a kapcsolótábla okozta, először onnan kell törölni | Vereb Barna | 2021.12.14
+27 | Kérdés törlése a rendszerből, ami fel van véve kérdéshez | SQL hiba javítva | Siker | - | Vereb Barna | 2021.12.14
+28 | Adott kérdőív adatainak szerkesztése | A szerkesztés megfelelően működött | Siker | - | Vereb Barna | 2021.12.14
+29 | Adott kérdőív adatainak szerkesztése jogosultásgok nélkül | A szerkesztés menüpont nem elérhető felhasználóként| Siker | - | Vereb Barna | 2021.12.14
+30 | Adott kérdőív adatainak szerkesztése string tipusú idvel | Az oldal ellenőrizte, hogy a paraméterként kapott id int-e| Siker | - | Vereb Barna | 2021.12.14
