@@ -12,5 +12,7 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 7 | Admin felület | A felhasználókat lehet törölni az adatbázisból | Siker | - | Kónya Donát | 2021.12.14
 8 | Admin felület | Új témát lehet hozzáadni az adatbázishoz | Siker | - | Kónya Donát | 2021.12.14
 9 | Oldal fejléc megjelenése | A fejléc reszponzív | Siker | - | Kónya Donát | 2021.12.14
+10 | Oldal fejléc megjelenése | Adott oldalon levő menüpont osztály aktívvá tétele | Sikertelen | feltételeket kellett beletenni, hogy működjön | Kónya Donát | 2021.12.14
+
 
 
