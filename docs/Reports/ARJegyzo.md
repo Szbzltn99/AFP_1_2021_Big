@@ -43,3 +43,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 38 | Adott kérdés adatainak szerkesztése negatív idvel | A negatív paraméter kezelve volt | Sikeres | Paraméter vizsgálattal könnyen megoldható | Ács Róbert | 2021.12.14
 39 | Adott kérdés adatainak szerkesztése negatív idvel | A negatív számok vizsgálata hozzáadva a paraméterhez  | Siker | - | Ács Róbert | 2021.12.14
 40 | Felhasználói adatok szerkesztése, jelszó változtatása | Jelszó változtatás | Siker | - | Ács Róbert | 2021.12.14 
+41 | Felhasználói adatok szerkesztése, email változtatása | Email változtatás | Siker | Az email cím változtatás megtörtént, a régi email cím mező nem frissül | Ács Róbert | 2021.12.14 
