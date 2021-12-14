@@ -14,5 +14,5 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 9 | Oldal fejléc megjelenése | A fejléc reszponzív | Siker | - | Kónya Donát | 2021.12.14
 10 | Oldal fejléc megjelenése | Adott oldalon levő menüpont osztály aktívvá tétele | Sikertelen | feltételeket kellett beletenni, hogy működjön | Kónya Donát | 2021.12.14
 11 | Oldal fejléc megjelenése | Minden oldal elérhető ami a menüponton található | Siker | - | Kónya Donát | 2021.12.14
-
+12 | Átlag lekérdezése | Átlag válaszok lekérdezése | Sikertelen | A hibát hibás SQL kód okozta | Kónya Donát | 2021.12.14
 
