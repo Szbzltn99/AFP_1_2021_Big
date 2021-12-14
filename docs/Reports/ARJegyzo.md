@@ -24,3 +24,6 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 19 | Bejelentkezés | A bejelentkező oldal megjelenik | Siker | - | Ács Róbert | 2021.12.12
 20 | Bejelentkezés | A bejelentkezés rossz adatok esetén nem működik | Siker | - | Ács Róbert | 2021.12.12
 21 | Bejelentkezés | Helyes adatok esetén a bejelentkezés sikeres | Siker | - | Ács Róbert | 2021.12.12
+22 | Bejelentkezés | Oldal betöltés sikertenel bejelentkezés után | Sikertelen | szintaktikai hiba miatt az oldal nem töltött be egy másikra | Ács Róbert | 2021.12.12
+23 | Bejelentkezés | Bejelentkezés után a bejelentkező adatai elmentődnek | Siker | külön változókban van eltárolva a felhasználók adatai | Ács Róbert | 2021.12.12
+24 | Új kérdés rögzítése adminként felület megjelenése | Az oldal sikeresen megjelenik | Siker | - | Ács Róbert | 2021.12.12
