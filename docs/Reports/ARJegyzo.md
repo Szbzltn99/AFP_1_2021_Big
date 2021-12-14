@@ -8,3 +8,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 3 | Új kérdés rögzítése adminként helytelen adatokkal | Az adatok feltöltésének nem kellene teljesülnie helytelen adatokkal | Siker | Nem írja ki, hogy nem töltötte fel. Kiírhatná. | Ács Róbert | 2021.12.12
 4 | kérdés felvétele az adatbázisba | Ezen az oldalon a megfelelő gombra kattintva eltárolja azt, hogy vannak új kérdőívek | Siker | - | Ács Róbert | 2021.12.12
 5 | kérdések megjelenítése | kérdések megjelennek, minden kitöltendő kérdőívet olvashatóan, átláthatóan lehet értelmezni | Siker | - | Ács Róbert | 2021.12.12
+6 | kérdések megjelenítése kérdésütközés esetén | kérdések megjelennek, minden megválaszolt kérdőívet olvashatóan, átláthatóan lehet értelmezni akkor is, ha kérdésütközés történik | Sikertelen | Egybe folyik a szöveg elválasztás nélkül | Ács Róbert | 2021.12.12
