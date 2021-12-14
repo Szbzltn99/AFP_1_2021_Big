@@ -9,4 +9,5 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 4 | Téma felvétel | A Téma oldal megjelenik, listázza a Téma | Sikertelen | A hibát az SQL kód helytelen szintaxisa okozta | Kónya Donát | 2021.12.14
 5 | Téma felvétel | A felhasználó sikeresen fel tudja venni a Téma | Siker | - | Kónya Donát | 2021.12.14
 6 | Admin felület | A felhasználók hibamentesen vannak listázva | Sikertelen | A bejelentkezett admin felhasználót is kilistázta, hibás volt a lekérdezés | Kónya Donát | 2021.12.14
+7 | Admin felület | A felhasználókat lehet törölni az adatbázisból | Siker | - | Kónya Donát | 2021.12.14
 
