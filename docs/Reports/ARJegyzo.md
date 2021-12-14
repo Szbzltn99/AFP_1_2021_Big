@@ -10,3 +10,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 5 | kérdések megjelenítése | kérdések megjelennek, minden kitöltendő kérdőívet olvashatóan, átláthatóan lehet értelmezni | Siker | - | Ács Róbert | 2021.12.12
 6 | kérdések megjelenítése kérdésütközés esetén | kérdések megjelennek, minden megválaszolt kérdőívet olvashatóan, átláthatóan lehet értelmezni akkor is, ha kérdésütközés történik | Sikertelen | Egybe folyik a szöveg elválasztás nélkül | Ács Róbert | 2021.12.12
 7 | kérdések megjelenítése kérdésütközés esetén (új teszt) | kérdések megjelennek, minden megválaszolt kérdőívet olvashatóan, átláthatóan lehet értelmezni akkor is, ha kérdésütközés történik | Sikeres | Egy [Enter] hiány volt] | Ács Róbert | 2021.12.12
+8 | Regisztráció | A regisztrációs oldal megjelenik | Siker | - | Ács Róbert | 2021.12.12
