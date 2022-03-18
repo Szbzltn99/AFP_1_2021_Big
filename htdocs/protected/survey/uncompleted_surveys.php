@@ -1,6 +1,6 @@
 <?php
 
-    if($_SESSION!=NULL)
+    if($_SESSION!=NULL || isset($_POST["submited"]))
     {
         $query = "SELECT * FROM user_survey u WHERE u.uid=" . $_SESSION["uid"];
     $result=classList($query);
@@ -114,7 +114,7 @@
             }
         }
     }
-    echo "<br>Válaszaidat sikeresen rögzítettük.<br>";
+    header("Refresh:0");
    }
 
    if (isset($_POST["selected"])): 
