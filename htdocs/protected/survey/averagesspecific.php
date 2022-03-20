@@ -15,6 +15,7 @@ function get_g()
 }
 $id = get_g();
 ?>
+<br>
 <?php
 $query = "SELECT * FROM questions INNER JOIN survey_question ON survey_question.qid = questions.qid AND survey_question.sid = $id";
 $listQuestionResults = classList($query);
@@ -22,7 +23,7 @@ $answerCountQuery = "SELECT COUNT(answer1), COUNT(answer2), COUNT(answer3) FROM 
 $answerCountQueryResult = classList($answerCountQuery);
 
 ?>
-<div class="container" class="usersDiv">
+<div class="container-fluid" class="usersDiv">
     <?php if ($listQuestionResults === NULL || empty($listQuestionResults)) : ?>
         <h2>Nincs egyetlen kérdés sem a kérdőívben!</h2>
     <?php else : ?>
