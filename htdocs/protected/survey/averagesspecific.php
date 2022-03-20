@@ -31,6 +31,7 @@ $answerCountQueryResult = classList($answerCountQuery);
             <thead>
                 <tr>
                     <th scope="col">Kérdés</th>
+                    <th></th>
                     <th scope="col">Átlag válaszok értéke</th>
                 </tr>
             </thead>
