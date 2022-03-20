@@ -144,47 +144,55 @@ A rendszer tökéletes működéséhez szükség van egy adatbázis szerverre, e
 
 **DSL**
 ```
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS survey;
+DROP TABLE IF EXISTS user_survey;
+DROP TABLE IF EXISTS topic;
+DROP TABLE IF EXISTS questions;
+DROP TABLE IF EXISTS survey_question;
+
+
 CREATE TABLE users (
-uid INT NOT NULL PRIMARY KEY,
+uid INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 username VARCHAR(45) NOT NULL,
 password VARCHAR(45) NOT NULL,
-email INT NOT NULL,
+email VARCHAR(45) NOT NULL,
 permission INT NOT NULL);
 
 CREATE TABLE survey (
-sid INT NOT NULL PRIMARY KEY,
-sname INT NOT NULL,
+sid INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+sname VARCHAR(45) NOT NULL,
 topic INT NOT NULL);
 
 CREATE TABLE user_survey (
-usid INT NOT NULL PRIMARY KEY,
+usid INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 sid INT NOT NULL,
 uid INT NOT NULL,
 answer INT NOT NULL,
 questionid INT NOT NULL);
 
 CREATE TABLE topic (
-tid INT NOT NULL PRIMARY KEY,
-name INT NOT NULL);
+tid INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+name VARCHAR(45) NOT NULL);
 
 CREATE TABLE questions (
-qid INT NOT NULL PRIMARY KEY,
-question VARCHAR(45) NOT NULL,
+qid INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+question VARCHAR(255) NOT NULL,
 answer1 INT NOT NULL,
 answer2 INT NOT NULL,
 answer3 INT NOT NULL);
 
 CREATE TABLE survey_question (
-id INT NOT NULL PRIMARY KEY,
+id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 sid INT NOT NULL,
 qid INT NOT NULL);
 
-ALTER TABLE survey ADD CONSTRAINT survey_topic_topic_tid FOREIGN KEY (topic) REFERENCES topic(tid);
-ALTER TABLE user_survey ADD CONSTRAINT user_survey_sid_survey_sid FOREIGN KEY (sid) REFERENCES survey(sid);
-ALTER TABLE user_survey ADD CONSTRAINT user_survey_uid_users_uid FOREIGN KEY (uid) REFERENCES users(uid);
-ALTER TABLE user_survey ADD CONSTRAINT user_survey_questionid_questions_qid FOREIGN KEY (questionid) REFERENCES questions(qid);
-ALTER TABLE survey_question ADD CONSTRAINT survey_question_sid_survey_sid FOREIGN KEY (sid) REFERENCES survey(sid);
-ALTER TABLE survey_question ADD CONSTRAINT survey_question_qid_questions_qid FOREIGN KEY (qid) REFERENCES questions(qid);
+ALTER TABLE survey ADD CONSTRAINT survey_topic_topic_tid FOREIGN KEY (topic) REFERENCES topic(tid) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE user_survey ADD CONSTRAINT user_survey_sid_survey_sid FOREIGN KEY (sid) REFERENCES survey(sid) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE user_survey ADD CONSTRAINT user_survey_uid_users_uid FOREIGN KEY (uid) REFERENCES users(uid) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE user_survey ADD CONSTRAINT user_survey_questionid_questions_qid FOREIGN KEY (questionid) REFERENCES questions(qid) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE survey_question ADD CONSTRAINT survey_question_sid_survey_sid FOREIGN KEY (sid) REFERENCES survey(sid) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE survey_question ADD CONSTRAINT survey_question_qid_questions_qid FOREIGN KEY (qid) REFERENCES questions(qid) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 ```
 **UML**
