@@ -25,14 +25,15 @@ function executeQuery($query)
     $connection = getConnection();
     $statement = mysqli_prepare($connection,$query);
     $success = mysqli_stmt_execute($statement);
-    if($success)
-    {
-        echo "siker";
-    }
-    else{
-
-        echo "fail: ".$query;
-    }
+    //
+    //if($success)
+    //{
+    //    echo "siker";
+    //}
+    //else{
+    //
+    //   echo "fail: ".$query;
+    //}
     mysqli_stmt_close($statement);
     mysqli_close($connection);
 }
