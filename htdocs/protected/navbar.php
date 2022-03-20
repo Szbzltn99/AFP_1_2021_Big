@@ -1,7 +1,57 @@
     <HTML>
     <head>
+    <script>
+      function getCookie(cname) 
+      {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+        function darkMode()
+        {
+          
+            const cb = document.querySelector('#darkModeSwitch');
+            if(cb.checked)
+            {
+              
+              document.cookie = "dark=on";
+              checkCookie() 
+            }
+            else 
+            {
+              document.cookie = "dark=off";
+              checkCookie() 
+            }
+        }
+        function checkCookie() 
+        {
+          let darkmode = getCookie("dark");
+          if(darkmode == "on") 
+          {
+            console.log("ON");
+            document.getElementById("darkModeSwitch").checked = true;
+            document.getElementById("pageStyle").setAttribute('href',"public/dark.css");
+          }
+          else
+          {
+            console.log("OFF");
+            document.getElementById("darkModeSwitch").checked = false;
+            document.getElementById("pageStyle").setAttribute('href',"public/light.css");
+          }
+        }
+    </script>
     </head>
-    <body>
+    <body onload="checkCookie();">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="index.php?P=home">Kérdőív</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,6 +60,12 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
+    <li class="nav-item mr-right">
+      <div class="custom-control custom-switch dark-mode">
+        <input type="checkbox" class="custom-control-input dark-mode-input" id="darkModeSwitch" onclick="darkMode();" />                  
+        <label class="custom-control-label dark-mode-label" for="darkModeSwitch">Sötét mód</label>
+      </div>
+    </li>
     <li class="nav-item">
         <a <?php if($_GET['P'] == "home"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=home">Kezdőlap</a>
       </li>

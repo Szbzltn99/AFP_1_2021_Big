@@ -22,6 +22,7 @@ if(!array_key_exists('P', $_GET) || empty($_GET['P']))
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
         <link rel="stylesheet" href="<?php echo PUBLIC_DIR."style.css";?>">
+        <link id="pageStyle" rel="stylesheet" href="<?php echo PUBLIC_DIR."light.css";?>">
         <script>
             function alertText(id,msg,alertType)
             {
