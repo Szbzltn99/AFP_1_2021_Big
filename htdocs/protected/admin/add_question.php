@@ -50,7 +50,7 @@ if(isset($_POST["submit"]))
         </script>
         <?php
     }
-    else if($_POST["nev"] > 45){
+    else if(strlen($_POST["nev"]) > 45){
         ?>
         <script>
                 Swal.fire(
