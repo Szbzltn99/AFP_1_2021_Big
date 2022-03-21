@@ -22,6 +22,12 @@ if (isset($_POST["names"])) {
                 //A cél az, hogy a szűrése csak azokat a kérdőíveket mutassa amikhez még nincs a felhasználónak válasza.
                 //TODO: A feltöltés ellenőrizhetné azt, hogy nincs-e már véletlen válasza a felhasználónak ehhez a kérdéshez ugyanebben a kérdőívben.
                 executeQuery($sql);
+
+                //5 xp-t kapsz minden megválaszolt kérdésért:
+                $xpsql = "UPDATE users 
+                SET xp=xp+5 
+                WHERE uid = ".$_SESSION["uid"];
+                executeQuery($xpsql);
             }
         }
 
