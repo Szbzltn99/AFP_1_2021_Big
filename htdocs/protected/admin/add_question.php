@@ -39,6 +39,17 @@ if(isset($_POST["submit"]))
             </script>
         <?php
     }
+    else if(is_numeric($_POST["nev"])) {
+        ?>
+        <script>
+            Swal.fire(
+                'Hiba!',
+                'A kérdés egy szöveg!',
+                'warning'
+            )
+        </script>
+        <?php
+    }
     else if($_POST["nev"] > 45){
         ?>
         <script>
