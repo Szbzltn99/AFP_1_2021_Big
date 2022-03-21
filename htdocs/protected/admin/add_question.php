@@ -1,8 +1,9 @@
 <br>
-        <div class="container">
-            <h2>Kérdés hozzáadása</h2>
+    <div class="page-hero d-flex align-items-center justify-content-center">
             <form action="" method="POST" accept-charset="UTF-8">
                 <span id = "alertText"></span>
+                <h1>Kérdés hozzáadása</h1>
+                <br>
                 <div class="form-group">
                     <label for="nev">Kérdés: </label>
                     <input type="text" class="form-control" name="nev" id="nev" maxlength="45"/> <br/>
