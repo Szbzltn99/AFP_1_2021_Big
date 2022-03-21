@@ -32,19 +32,19 @@ if(isset($_POST["submit"]))
         ?>
         <script>
                 Swal.fire(
-                    'Error!',
-                    'You did not enter any question!',
+                    'Hiba!',
+                    'Nem gépelte be a kérdést!',
                     'warning'
                 )
             </script>
         <?php
     }
-    else if($_POST["nev"]> 45){
+    else if($_POST["nev"] > 45){
         ?>
         <script>
                 Swal.fire(
-                    'Error!',
-                    'The question you entered is too long! (more than 45 charaters)',
+                    'Hiba!',
+                    'A beírt kérdés több mint 45 karakter!',
                     'warning'
                 )
             </script>
@@ -54,8 +54,8 @@ if(isset($_POST["submit"]))
         ?>
         <script>
                 Swal.fire(
-                    'Error!',
-                    'You did not enter any answer for option one!',
+                    'Hiba!',
+                    'Nem adott értéket az egyes számú opciónak!',
                     'warning'
                 )
             </script>
@@ -66,8 +66,8 @@ if(isset($_POST["submit"]))
         ?>
         <script>
                 Swal.fire(
-                    'Error!',
-                    'Option one is an integer!',
+                    'Hiba!',
+                    'Az egyes számú opció egy egész szám!',
                     'warning'
                 )
             </script>
@@ -79,8 +79,8 @@ if(isset($_POST["submit"]))
         ?>
         <script>
                 Swal.fire(
-                    'Error!',
-                    'You did not enter any answer for option two!',
+                    'Hiba!',
+                    'Nem adott értéket a kettes számú opciónak!',
                     'warning'
                 )
             </script>
@@ -92,8 +92,8 @@ if(isset($_POST["submit"]))
         ?>
         <script>
                 Swal.fire(
-                    'Error!',
-                    'Option two is an integer!',
+                    'Hiba!',
+                    'A kettes számú opció egy egész szám!',
                     'warning'
                 )
             </script>
@@ -105,8 +105,8 @@ if(isset($_POST["submit"]))
         ?>
         <script>
                 Swal.fire(
-                    'Error!',
-                    'You did not enter any answer for option three!',
+                    'Hiba!',
+                    'Nem adott értéket a hármas számú opciónak!',
                     'warning'
                 )
             </script>
@@ -118,8 +118,8 @@ if(isset($_POST["submit"]))
         ?>
         <script>
                 Swal.fire(
-                    'Error!',
-                    'Option three is an integer!',
+                    'Hiba!',
+                    'A hármas számú opció egy egész szám!',
                     'warning'
                 )
             </script>
@@ -140,7 +140,7 @@ if(isset($_POST["submit"]))
         <script>
                     Swal.fire({
                     icon: 'success',
-                    title: 'Question succesfully added!',
+                    title: 'Kérdés sikeresen hozzáadva a rendszerhez!',
                     showConfirmButton: false,
                     timer: 1500
                     })
