@@ -69,7 +69,31 @@
     <li class="nav-item">
         <a <?php if($_GET['P'] == "home"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=home">Kezdőlap</a>
       </li>
-    
+      
+      <?php if($_SESSION["uid"] != NULL): ?>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <?php
+          $query = "SELECT username FROM users WHERE uid=" . $_SESSION["uid"];
+          
+          $result = classList($query);
+          
+          echo $result[0]["username"];
+
+          ?>
+
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          
+          <a <?php if($_GET['P'] == "profile"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=profile">Profilom</a>
+          <a <?php if($_GET['P'] == "tovabbifunkciok"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=tovabbifunkciok">További funkciók...</a>
+
+        </div>
+
+      </li>
+      <?php endif; ?>
+
+
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Témakörök
