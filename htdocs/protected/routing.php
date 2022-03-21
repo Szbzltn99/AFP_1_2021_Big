@@ -19,6 +19,7 @@ $_GET['P'] = 'home';
 		case 'averages' : isUserLoggedIn() ? require_once PROTECTED_DIR.'survey/average.php' : header('Location: index.php'); break;
 		case 'answerJustSurvey':  require_once PROTECTED_DIR.'survey/ans_survey.php';  break;
 		case 'averagesspecific': require_once PROTECTED_DIR.'survey/averagesspecific.php'; break;
+		case 'profile': isUserLoggedIn() ? require_once PROTECTED_DIR.'user/myprofile.php' : header('Location: index.php'); break;
 		default: require_once PROTECTED_DIR.'404.php'; break;
 	}
 
