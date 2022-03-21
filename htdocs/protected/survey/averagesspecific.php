@@ -23,7 +23,8 @@ $answerCountQuery = "SELECT COUNT(answer1), COUNT(answer2), COUNT(answer3) FROM 
 $answerCountQueryResult = classList($answerCountQuery);
 
 ?>
-<div class="container-fluid" class="usersDiv">
+<div class="page-hero d-flex align-items-center justify-content-center">
+    <div class="text-center">
     <?php if ($listQuestionResults === NULL || empty($listQuestionResults)) : ?>
         <h2>Nincs egyetlen kérdés sem a kérdőívben!</h2>
     <?php else : ?>
@@ -55,4 +56,5 @@ $answerCountQueryResult = classList($answerCountQuery);
         </table>
     <?php endif; ?>
     </form>
+    </div>
 </div>
