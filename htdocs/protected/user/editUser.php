@@ -25,44 +25,44 @@
                 ?>
                 <table>
                 <form method = "POST">
-                    <h2>Edit your <span style = "color:#42a68f;">personal</span> datas</h2>
+                    <h2>Felhasználói <span style = "color:#42a68f;">adatok</span> szerkesztése</h2>
                     <tr>
-                        <td><span>Username: </span></td>
+                        <td><span>Felhasználónév: </span></td>
                         <td><input type = "text" value = "<?php echo $userData["username"];?>" disabled></td> 
                     </tr>
                     <tr>
-                        <td><span>Old password:</span></td>
+                        <td><span>Régi jelszó: </span></td>
                         <td><input type = "password" name = "oldPassword" id = 'oldPass'></td>
                     </tr>
                     <tr>
-                        <td><span>New password:</span></td>
+                        <td><span>Új jelszó: </span></td>
                         <td><input type = "password" name = "newPassword" id = "newPass"></td>
                     </tr>
                     <tr>
-                        <td><span>New password again:</span></td>
+                        <td><span>Új jelszó újra:</span></td>
                         <td><input type = "password" name = "newPasswordAgain" id = "newPassAgain"></td>
                     </tr>
                     <tr>
                         <td colspan = 2 class = 'checkPasswords'>
                         <div class="custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick="showPassword('oldPass');showPassword('newPass');showPassword('newPassAgain')"/>
-                            <label class="custom-control-label" for="customSwitch1">Show passwords</label>
+                            <label class="custom-control-label" for="customSwitch1">Jelszó megjelenításe</label>
                         </div>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan = 2><button class="btn btn-dark" name = "modifyUserPass" value =<?= $userData['uid']?>>Modify Password</button></td>
+                        <td colspan = 2><button class="btn btn-dark" name = "modifyUserPass" value =<?= $userData['uid']?>>Jelszó módosítása</button></td>
                     </tr>
                     <tr>
                         <td><span>Email:</span></td>
                         <td><input type = "text" name = "Email" disabled value = <?php echo $userData["email"];?>></td>
                     </tr>
                     <tr>
-                        <td><span>New Email:</span></td>
+                        <td><span>Új email:</span></td>
                         <td><input type = "email" name = "newEmail"></td>
                     </tr>
                     <tr>
-                        <td colspan = 2><button class="btn btn-dark" name = "modifyUserEmail" value =<?= $userData['uid']?>>Modify Email</button></td>
+                        <td colspan = 2><button class="btn btn-dark" name = "modifyUserEmail" value =<?= $userData['uid']?>>Email módosítása</button></td>
                     </tr>
                 </form>
                 </table>
@@ -80,8 +80,8 @@
         ?>
             <script>
                 Swal.fire(
-                    'Error!',
-                    'You not entered any new password!',
+                    'Hiba!',
+                    'Nem írt be új jelszót!',
                     'warning'
                 )
             </script>
@@ -93,7 +93,7 @@
                 <script>
                     Swal.fire({
                     icon: 'warning',
-                    title: 'Password need minimum 8 character length password!',
+                    title: 'A jelszónak legalább 8 karakternek kell lennie!',
                     showConfirmButton: false,
                     timer: 2000
                     })
@@ -106,7 +106,7 @@
                 <script>
                     Swal.fire({
                     icon: 'warning',
-                    title: 'The old password not correct!',
+                    title: 'A régi jelszó nem megfelelő!',
                     showConfirmButton: false,
                     timer: 2000
                     })
@@ -119,7 +119,7 @@
                 <script>
                     Swal.fire({
                     icon: 'warning',
-                    title: "Password doesn't match!",
+                    title: "Az új jelszavak nem egyeznek!",
                     showConfirmButton: false,
                     timer: 2000
                     })
@@ -136,7 +136,7 @@
                 <script>
                     Swal.fire({
                     icon: 'success',
-                    title: 'Password successfully modified!',
+                    title: 'Jelszó sikeresen megváltoztatva!',
                     showConfirmButton: false,
                     timer: 1500
                     })
@@ -154,8 +154,8 @@
         ?>
             <script>
                 Swal.fire(
-                    'Error!',
-                    'You not entered any new email!',
+                    'Hiba!',
+                    'Nem írt be új emailt!',
                     'warning'
                 )
             </script>
@@ -170,7 +170,7 @@
                 <script>
                     Swal.fire({
                     icon: 'success',
-                    title: 'Email successfully modified!',
+                    title: 'Sikeresen megváltoztatta az emailt!',
                     showConfirmButton: false,
                     timer: 1500
                     })
