@@ -70,7 +70,7 @@
         <a <?php if($_GET['P'] == "home"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=home">Kezdőlap</a>
       </li>
       
-      <?php if($_SESSION["uid"] != NULL): ?>
+      <?php if($_SESSION!= NULL): ?>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <?php
@@ -81,7 +81,7 @@
           echo $result[0]["username"];
 
           ?>
-
+          
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           
