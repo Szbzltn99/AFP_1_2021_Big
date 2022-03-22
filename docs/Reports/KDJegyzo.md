@@ -17,3 +17,7 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 12 | Átlag lekérdezése | Átlag válaszok lekérdezése | Sikertelen | A hibát hibás SQL kód okozta | Kónya Donát | 2021.12.14
 13 | Átlag lekérdezése | Átlag válaszok lekérdezése | Sikertelen | A hibát hibás SQL szintaxis okozta | Kónya Donát | 2021.12.14
 14 | Átlag lekérdezése | Átlag válaszok lekérdezése | Sikeres |  | Kónya Donát | 2021.12.14
+15 | Új kérdés felvétel a rendszerbe | Kérdés név validálása | Sikertelen | A kérdés értékét vizsgáltam, nem a hosszát | Kónya Donát | 2022.03.21
+16 | Új kérdés felvétel a rendszerbe | Kérdés név validálása | Sikeres | Kód javítása, strlen használata | Kónya Donát | 2022.03.21
+17 | Navbar | Navbar megjelenítése kijelentkezett állapotban | Sikertelen | A hibát a session okozta, ekkor még nem létezik és az uid kulcs került lekérdezése | Kónya Donát | 2022.03.21
+18 | Navbar | Navbar megjelenítése kijelentkezett állapotban | Sikeres | Csak a session vizsgálata megoldotta a hibát, nincs szükség kulcsra | Kónya Donát | 2022.03.21
