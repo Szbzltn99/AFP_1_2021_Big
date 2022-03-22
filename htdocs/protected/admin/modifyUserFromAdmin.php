@@ -25,36 +25,36 @@
                 ?>
                 <table>
                 <form method = "POST">
-                    <h2>Edit <span style = "color:#42a68f;"><?php echo $userData["username"]; ?></span> user datas</h2>
+                    <h2><span style = "color:#42a68f;"><?php echo $userData["username"]; ?></span> nevű felhasználó adatainak szerkesztése</h2>
                     <tr>
-                        <td><span>Username: </span></td>
+                        <td><span>Felhasználónév: </span></td>
                         <td><input type = "text" value = "<?php echo $userData["username"];?>" disabled></td>   
                     </tr>
                     <tr>
-                        <td><span>New password:</span></td>
+                        <td><span>Új jelszó:</span></td>
                         <td><input type = "password" name = "newPassword" id = "newPass"></td>
                     </tr>
                     <tr>
                         <td colspan = 2 class = 'checkPasswords'>
                         <div class="custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick = "showPassword('newPass')"/>
-                            <label class="custom-control-label" for="customSwitch1">Show passwords</label>
+                            <label class="custom-control-label" for="customSwitch1">Jelszó megjelenítése</label>
                         </div>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan = 2><button class="btn btn-dark" name = "modifyUserPass" value =<?= $userData['uid']?>>Modify Password</button></td>
+                        <td colspan = 2><button class="btn btn-dark" name = "modifyUserPass" value =<?= $userData['uid']?>>Jelszó megváltoztatása</button></td>
                     </tr>
                     <tr>
                         <td><span>Email:</span></td>
                         <td><input type = "text" name = "Email" disabled value = <?php echo $userData["email"];?>></td>
                     </tr>
                     <tr>
-                        <td><span>New Email:</span></td>
+                        <td><span>Új email:</span></td>
                         <td><input type = "email" name = "newEmail"></td>
                     </tr>
                     <tr>
-                        <td colspan = 2><button class="btn btn-dark" name = "modifyUserEmail" value =<?= $userData['uid']?>>Modify Email</button></td>
+                        <td colspan = 2><button class="btn btn-dark" name = "modifyUserEmail" value =<?= $userData['uid']?>>Email megváltoztatása</button></td>
                     </tr>
                 </form>
                 </table>
@@ -72,8 +72,8 @@
         ?>
             <script>
                 Swal.fire(
-                    'Error!',
-                    'You not entered any new password!',
+                    'Hiba!',
+                    'Nem írt be új jelszót!',
                     'warning'
                 )
             </script>
@@ -85,7 +85,7 @@
                 <script>
                     Swal.fire({
                     icon: 'warning',
-                    title: 'User password need 8 length password!',
+                    title: 'A felhasználó jelszava legalább 8 karakter kell hogy legyen!',
                     showConfirmButton: false,
                     timer: 2000
                     })
@@ -102,7 +102,7 @@
                 <script>
                     Swal.fire({
                     icon: 'success',
-                    title: 'User password successfully modified!',
+                    title: 'A felhasználó jelszava sikeresen megváltoztatva!',
                     showConfirmButton: false,
                     timer: 1500
                     })
@@ -120,8 +120,8 @@
         ?>
             <script>
                 Swal.fire(
-                    'Error!',
-                    'You not entered any new email!',
+                    'Hiba!!',
+                    'Nem írt be új emailt!',
                     'warning'
                 )
             </script>
@@ -137,7 +137,7 @@
                 <script>
                     Swal.fire({
                     icon: 'success',
-                    title: 'User email successfully modified!',
+                    title: 'A felhasználó emaile sikeresen megváltoztatva!',
                     showConfirmButton: false,
                     timer: 1500
                     })
