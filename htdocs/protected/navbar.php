@@ -105,6 +105,7 @@
           <a <?php if($_GET['P'] == "topics"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=topics">Témakörök megtekintése</a>
           <a <?php if($_GET['P'] == "completedSurveys"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=completedSurveys">Kitöltött kérdőívek megjelenítése</a>
           <a <?php if($_GET['P'] == "averages"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=averages">Átlagok</a>
+          <a <?php if($_GET['P'] == "statistics"): echo "class='dropdown-item active'"; else: echo "class='dropdown-item'"; endif; ?> href="index.php?P=statistics">Statisztika</a>
           <?php endif; ?>
         </div>
       </li>
