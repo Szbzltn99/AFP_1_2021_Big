@@ -65,11 +65,61 @@
 if(isset($_POST["registerBtn"]))
 {
     if($_POST['g-recaptcha-response'] != "") {
-        if($_POST["reg_username"] == "") echo "<script>alertText('alertText','A felhasználónév mező nem lehet üres!','error')</script>";
-        else if($_POST["reg_password"] == "") echo "<script>alertText('alertText','A jelszó mező nem lehet üres!','error')</script>";
-        else if($_POST["reg_password"] != $_POST["reg_password_again"]) echo "<script>alertText('alertText','A jelszavak nem egyeznek!','error')</script>";
-        else if($_POST["reg_email"] == "") echo "<script>alertText('alertText','Az email mező nem lehet üres!','error')</script>";
-        else if(strlen($_POST["reg_password"]) < 7) echo "<script>alertText('alertText','A jelszó mező nem lehet 8 karaktertől kevesebb!','error')</script>";
+        if($_POST["reg_username"] == "") {
+            ?>
+                <script>
+                    Swal.fire(
+                        'Hiba!!',
+                        'A felhasználónév nem lehet üres!',
+                        'warning'
+                    )
+                </script>
+            <?php
+        }
+        else if($_POST["reg_password"] == "") {
+            ?>
+                <script>
+                    Swal.fire(
+                        'Hiba!!',
+                        'A jelszó nem lehet üres!',
+                        'warning'
+                    )
+                </script>
+            <?php
+        }
+        else if($_POST["reg_password"] != $_POST["reg_password_again"]) {
+            ?>
+                <script>
+                    Swal.fire(
+                        'Hiba!!',
+                        'A jelszavak nem egyeznek!',
+                        'warning'
+                    )
+                </script>
+            <?php
+        }
+        else if($_POST["reg_email"] == "") {
+            ?>
+                <script>
+                    Swal.fire(
+                        'Hiba!!',
+                        'Az email nem lehet üres!',
+                        'warning'
+                    )
+                </script>
+            <?php
+        }
+        else if(strlen($_POST["reg_password"]) < 7) {
+            ?>
+                <script>
+                    Swal.fire(
+                        'Hiba!!',
+                        'A jelszó legyen legalább 8 karakter!',
+                        'warning'
+                    )
+                </script>
+            <?php
+        }
         else
         {
             $secret = "6Ldn7pwfAAAAACRw3JETEHv49XHprFK4_nePnRy8";
