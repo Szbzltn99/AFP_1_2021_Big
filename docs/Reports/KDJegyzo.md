@@ -21,3 +21,5 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 16 | Új kérdés felvétel a rendszerbe | Kérdés név validálása | Sikeres | Kód javítása, strlen használata | Kónya Donát | 2022.03.21
 17 | Navbar | Navbar megjelenítése kijelentkezett állapotban | Sikertelen | A hibát a session okozta, ekkor még nem létezik és az uid kulcs került lekérdezése | Kónya Donát | 2022.03.21
 18 | Navbar | Navbar megjelenítése kijelentkezett állapotban | Sikeres | Csak a session vizsgálata megoldotta a hibát, nincs szükség kulcsra | Kónya Donát | 2022.03.21
+19 | reCAPTCHA | reCAPTCHA működése | Sikertelen | A hibát a site key és a secret key hiánya okozta | Kónya Donát | 2022.04.25
+20 | reCAPTCHA | reCAPTCHA működése | Sikeres | | Kónya Donát | 2022.04.25
