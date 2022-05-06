@@ -41,3 +41,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 36 | Új kérdés felvétel a rendszerbe | Kérdés név validálása | Sikeres | Kód javítása, strlen használata | Vereb Barna | 2022.05.06
 37 | Navbar | Navbar megjelenítése kijelentkezett állapotban | Sikertelen | A hibát a session okozta, ekkor még nem létezik és az uid kulcs került lekérdezése | Vereb Barna | 2022.05.06
 38 | Navbar | Navbar megjelenítése kijelentkezett állapotban | Sikeres | Csak a session vizsgálata megoldotta a hibát, nincs szükség kulcsra | Vereb Barna | 2022.05.06
+39 | reCAPTCHA | reCAPTCHA működése | Sikertelen | A hibát a site key és a secret key hiánya okozta | Vereb Barna | 2022.05.06
