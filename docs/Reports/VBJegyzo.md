@@ -40,3 +40,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 35 | Új kérdés felvétel a rendszerbe | Kérdés név validálása | Sikertelen | A kérdés értékét vizsgáltam, nem a hosszát | Vereb Barna | 2022.05.06
 36 | Új kérdés felvétel a rendszerbe | Kérdés név validálása | Sikeres | Kód javítása, strlen használata | Vereb Barna | 2022.05.06
 37 | Navbar | Navbar megjelenítése kijelentkezett állapotban | Sikertelen | A hibát a session okozta, ekkor még nem létezik és az uid kulcs került lekérdezése | Vereb Barna | 2022.05.06
+38 | Navbar | Navbar megjelenítése kijelentkezett állapotban | Sikeres | Csak a session vizsgálata megoldotta a hibát, nincs szükség kulcsra | Vereb Barna | 2022.05.06
