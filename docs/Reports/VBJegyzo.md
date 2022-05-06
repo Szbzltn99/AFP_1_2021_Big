@@ -37,3 +37,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 32 | Adott kérdőív adatainak szerkesztése negatív idvel | A negatív számok vizsgálata hozzáadva a paraméterhez  | Siker | - | Vereb Barna | 2021.12.14
 33 | Felhasználói adatok szerkesztése, jelszó változtatása | Jelszó változtatás | Siker | - | Vereb Barna | 2021.12.14
 34 | Felhasználói adatok szerkesztése, email változtatása | Email változtatás | Siker | Az email cím változtatás megtörtént, a régi email cím mező nem frissül | Vereb Barna | 2021.12.14
+35 | Új kérdés felvétel a rendszerbe | Kérdés név validálása | Sikertelen | A kérdés értékét vizsgáltam, nem a hosszát | Vereb Barna | 2022.05.06
