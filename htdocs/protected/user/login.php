@@ -1,4 +1,13 @@
-
+<?php
+if(isset($_GET["logn"]))
+{
+    $lgn = $_GET["logn"];
+}
+else
+{
+    $lgn = "";
+}
+?>
 <HTMl>
     <HEAD>
         <link rel="stylesheet" href="<?php echo PUBLIC_DIR."login_register.css";?>">
@@ -24,7 +33,7 @@
         <span id = "alertText"></span>
         <div class="row">
             <div class="col-md-12 form-group">
-                <input type="text" class="form-control" placeholder="Fehasználónév" name = "log_username">
+                <input type="text" class="form-control" value="<?=$lgn?>" placeholder="Fehasználónév" name = "log_username">
             </div>
         </div>
         <div class="row">
