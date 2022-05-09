@@ -46,4 +46,5 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 41 | Felhasználói adatok szerkesztése, email változtatása | Email változtatás | Siker | Az email cím változtatás megtörtént, a régi email cím mező nem frissül | Ács Róbert | 2021.12.14 
 42 | Register| Regisztráció hibás adatokkal várva az újratöltést a beírt adatokkal együtt| Sikeres | Az általam beírt felhasználónév vissza került a felhasználónév mezőbe sikertelen regisztráció során| Ács Róbert | 2022.05.09
 43 | reCAPTCHA | reCAPTCHA működése | Sikeres | | Ács Róbert| 2022.05.09
+44 | Register-> login| A sikeres regisztráció átirányít a login oldalra | Sikeres | | Ács Róbert| 2022.05.09
 
