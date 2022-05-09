@@ -47,4 +47,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 42 | Register| Regisztráció hibás adatokkal várva az újratöltést a beírt adatokkal együtt| Sikeres | Az általam beírt felhasználónév vissza került a felhasználónév mezőbe sikertelen regisztráció során| Ács Róbert | 2022.05.09
 43 | reCAPTCHA | reCAPTCHA működése | Sikeres | | Ács Róbert| 2022.05.09
 44 | Register-> login| A sikeres regisztráció átirányít a login oldalra | Sikeres | | Ács Róbert| 2022.05.09
-
+45 | Login regisztráció után| A sikeres regisztráció átirányít a login oldalra ezt követően a login oldalon a regisztrált felhasználónév megjelenik így azt nem kell beírni. | Sikeres | | Ács Róbert| 2022.05.09
