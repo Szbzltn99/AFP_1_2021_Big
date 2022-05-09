@@ -84,8 +84,8 @@ if(isset($_POST["registerBtn"]))
                 $email = $_POST["reg_email"];
                 $registerQuery = "INSERT INTO users(username,password,email,permission) VALUES('". $uname. "', '". $passwd ."', '". $email ."', 0)";
                 executeQuery($registerQuery);
-
-                header("Location: index.php?P=login");
+                
+                header("Location: index.php?P=login&logn=".$uname);
                 }
                 else
                 {
