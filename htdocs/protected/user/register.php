@@ -1,69 +1,15 @@
-
-<HTMl>
-    <HEAD>
-        <link rel="stylesheet" href="<?php echo PUBLIC_DIR."login_register.css";?>">
-        <link rel="stylesheet" href="../../public/style.css">
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <script>
-            function alertText(id,msg,alertType)
-            {
-                if(alertType == "success")
-                {
-                document.getElementById(id).style.color = "#66CD00";
-                }
-                else
-                {
-                    document.getElementById(id).style.color = "crimson";
-                }
-                document.getElementById (id). innerHTML = msg;
-            }
-        </script>
-    </HEAD>
-    <BODY>
-        <form method = "POST">
-            <div class="simple-container">
-        <h2>Regisztráció</h2>
-        <span id = "alertText"></span>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="text" class="form-control" placeholder="Fehasználónév" name = "reg_username">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="password" placeholder="Jelszó" class="form-control" name = "reg_password">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="password" placeholder="Jelszó újra" class="form-control" name = "reg_password_again">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="email" placeholder="Email" class="form-control" name = "reg_email">
-            </div>
-        </div>
-        <div class="g-recaptcha" data-sitekey="6Ldn7pwfAAAAACw2iKHx8m9Z44PmGvO0WMI0jOSv"></div>
-        <br>
-        <div class="row">
-            <div class="col-md-12 form-group link">
-                Már van felhasználód? <a href = "index.php?P=login"><span>Kattints ide!</span><a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="submit" class="btn btn-block btn-login" name = "registerBtn" value = "Regisztrálás">
-            </div>
-        </div>
-        </div>
-        </form>
-    </BODY>
-</HTML>
 <?php
+$reg_username = "";
+$reg_email = "";
+
 
 if(isset($_POST["registerBtn"]))
 {
+    if(isset($_POST["reg_username"]))
+    $reg_username= $_POST["reg_username"];
+    if(isset($_POST["reg_email"]))
+    $reg_email= $_POST["reg_email"];
+
     if($_POST['g-recaptcha-response'] != "") {
         if($_POST["reg_username"] == "") {
             ?>
@@ -77,6 +23,7 @@ if(isset($_POST["registerBtn"]))
             <?php
         }
         else if($_POST["reg_password"] == "") {
+            
             ?>
                 <script>
                     Swal.fire(
@@ -137,6 +84,8 @@ if(isset($_POST["registerBtn"]))
                 $email = $_POST["reg_email"];
                 $registerQuery = "INSERT INTO users(username,password,email,permission) VALUES('". $uname. "', '". $passwd ."', '". $email ."', 0)";
                 executeQuery($registerQuery);
+
+                header("Location: index.php?P=login");
                 }
                 else
                 {
@@ -173,3 +122,64 @@ if(isset($_POST["registerBtn"]))
     
 }
 ?>
+<HTMl>
+    <HEAD>
+        <link rel="stylesheet" href="<?php echo PUBLIC_DIR."login_register.css";?>">
+        <link rel="stylesheet" href="../../public/style.css">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+            function alertText(id,msg,alertType)
+            {
+                if(alertType == "success")
+                {
+                document.getElementById(id).style.color = "#66CD00";
+                }
+                else
+                {
+                    document.getElementById(id).style.color = "crimson";
+                }
+                document.getElementById (id). innerHTML = msg;
+            }
+        </script>
+    </HEAD>
+    <BODY>
+        <form method = "POST">
+            <div class="simple-container">
+        <h2>Regisztráció</h2>
+        <span id = "alertText"></span>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input value="<?=$reg_username?>" type="text" class="form-control" placeholder="Fehasználónév" name = "reg_username">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="password" placeholder="Jelszó" class="form-control" name = "reg_password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="password" placeholder="Jelszó újra" class="form-control" name = "reg_password_again">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input value="<?=$reg_email?>" type="email" placeholder="Email" class="form-control" name = "reg_email">
+            </div>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6Ldn7pwfAAAAACw2iKHx8m9Z44PmGvO0WMI0jOSv"></div>
+        <br>
+        <div class="row">
+            <div class="col-md-12 form-group link">
+                Már van felhasználód? <a href = "index.php?P=login"><span>Kattints ide!</span><a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="submit" class="btn btn-block btn-login" name = "registerBtn" value = "Regisztrálás">
+            </div>
+        </div>
+        </div>
+        </form>
+    </BODY>
+</HTML>
